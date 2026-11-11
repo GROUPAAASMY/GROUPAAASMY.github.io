@@ -1,44 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"> 
-    <title>Room Buddy-Events</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-     <div class="layout-container">
-       <aside class="sidebar">
-         <div class="brand">
-           <div class="brand-icon">&#8962;</div>
-           <div class="brand-text">
-             <span class="brand-title">Room Buddy</span>
-             <span class="brand-subtitle">Home, together</span>
-           </div>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomBuddy - Events</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
 
-          <!--Main navigation bar-->
-          <nav aria-label="Main" class="main-nav">
-            <ul>
-                <li><a href="#">&#8962;&nbsp;&nbsp; Home</a></li>
-                <li><a href="#">&#9745;&nbsp;&nbsp; Tasks</a></li>
-                <li><a href="#">&#128722;&nbsp;&nbsp; Groceries</a></li>
-                <li><a href="#">&#9728;&nbsp;&nbsp; Amenities</a></li>
-                <li class="active">
-                  <a href="#" aria-current="page">&#128197;&nbsp;&nbsp; Events</a>
-                </li>
-            </ul>
-          </nav>
-          <!--Setting navigation bar-->
-          <div class="setting-nav">
-            <a href="#">&#9881;&nbsp;&nbsp; Setting </a>
+    <!-- Main app container -->
+    <div class="room-app">
 
-          </div>
-        </asside>
-      </div>
+        <!-- Sidebar menu -->
+        <aside class="room-sidebar">
+            <div class="room-brand">
+                <div class="room-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </div>
+                <div class="room-brand-text">
+                    <h1>RoomBuddy</h1>
+                    <p>home, together</p>
+                </div>
+            </div>
 
+            <nav class="room-nav">
+                <a href="#" class="room-nav-item" data-page="home">
+                    <span>🏠</span> Home
+                </a>
+                <a href="#" class="room-nav-item" data-page="tasks">
+                    <span>✓</span> Tasks
+                </a>
+                <a href="#" class="room-nav-item" data-page="groceries">
+                    <span>🛒</span> Groceries
+                </a>
+                <a href="#" class="room-nav-item" data-page="amenities">
+                    <span>✨</span> Amenities
+                </a>
+                <a href="#" class="room-nav-item active" data-page="events" id="current-tab">
+                    <span>📅</span> Events
+                </a>
+            </nav>
 
-  </body>
+            <div class="room-sidebar-footer">
+                <a href="#" class="room-nav-item" data-page="settings">
+                    <span>⚙️</span> Settings
+                </a>
+            </div>
+        </aside>
 
+        <!-- Main content area -->
+        <main class="room-main">
+            
+            <!-- Top bar -->
+            <header class="room-topbar">
+                <div class="room-date-label">Thursday, 24 April</div>
+                <div class="room-user-menu">
+                    <button class="room-icon-btn" id="notifications-btn" aria-label="Open notifications">
+                        🔔
+                    </button>
+                    <div class="room-user-badge">
+                        <span class="room-avatar-circle">YO</span>
+                        <span class="room-username">You</span>
+                    </div>
+                </div>
+            </header>
 
-  
+            <!-- Page header -->
+            <section class="room-header-box">
+                <div class="room-month-tag">April · May</div>
+                <div class="room-title-row">
+                    <h2>What's coming up.</h2>
+                    <div class="room-action-buttons">
+                        <button class="room-btn-ghost" id="toggle-view-btn" data-action="switch-view">
+                            📅 List view
+                        </button>
+                        <button class="room-btn-solid" id="add-event-btn" data-action="open-add-modal">
+                            + Add event
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Date picker bar -->
+            <section class="room-date-bar" id="date-slider">
+                <div class="room-date-card active" data-date="2026-04-24">
+                    <span class="room-day-name">THU</span>
+                    <span class="room-day-num">24</span>
+                </div>
+                <div class="room-date-card" data-date="2026-04-25">
+                    <span class="room-day-name">FRI</span>
+                    <span class="room-day-num">25</span>
+                </div>
+                <div class="room-date-card" data-date="2026-04-26">
+                    <span class="room-day-name">SAT</span>
+                    <span class="room-day-num">26</span>
+                    <span class="room-dot"></span>
+                </div>
+                <div class="room-date-card" data-date="2026-04-27">
+                    <span class="room-day-name">SUN</span>
+                    <span class="room-day-num">27</span>
+                    <span class="room-dot"></span>
+                </div>
+                <div class="room-date-card" data-date="2026-04-28">
+                    <span class="room-day-name">MON</span>
+                    <span class="room-day-num">28</span>
+                </div>
+                <div class="room-date-card" data-date="2026-04-29">
+                    <span class="room-day-name">TUE</span>
+                    <span class="room-day-num">29</span>
+                    <span class="room-dot"></span>
+                </div>
+                <div class="room-date-card" data-date="2026-04-30">
+                    <span class="room-day-name">WED</span>
+                    <span class="room-day-num">30</span>
+                </div>
+            </section>
+
+            <!-- Category filters -->
+            <section class="room-filter-bar" id="category-filters">
+                <button class="room-filter-pill active" data-category="all">All Events</button>
+                <button class="room-filter-pill" data-category="social">Social</button>
+                <button class="room-filter-pill" data-category="finance">Finance</button>
+                <button class="room-filter-pill" data-category="household">Household</button>
+                <button class="room-filter-pill" data-category="maintenance">Maintenance</button>
+            </section>
+
+            <!-- Events list wrapper -->
+            <div class="room-events-wrapper" id="events-list-container">
+
+                <!-- Saturday events -->
+                <div class="room-group" data-group-date="2026-04-26">
+                    <h3 class="room-group-title">SAT 26 APR</h3>
+
+                    <!-- Event card 1 -->
+                    <div class="room-card" data-event-id="evt-01" data-category="household">
+                        <div class="room-card-date">
+                            <span class="room-card-month">APR</span>
+                            <span class="room-card-day">26</span>
+                            <span class="room-card-week">SAT</span>
+                        </div>
+                        <div class="room-card-body">
+                            <div class="room-card-top">
+                                <h4>Grocery run</h4>
+                                <span class="room-badge household">HOUSEHOLD</span>
+                            </div>
+                            <div class="room-card-details">
+                                <span>⏰ 10:00 AM</span>
+                                <span>👥 2 housemates</span>
+                            </div>
+                        </div>
+                        <div class="room-card-end">
+                            <div class="room-avatars">
+                                <span class="room-avatar person-yo">YO</span>
+                                <span class="room-avatar person-sa">SA</span>
+                            </div>
+                            <span class="room-arrow">›</span>
+                        </div>
+                    </div>
+
+                    <!-- Event card 2 -->
+                    <div class="room-card" data-event-id="evt-02" data-category="maintenance">
+                        <div class="room-card-date">
+                            <span class="room-card-month">APR</span>
+                            <span class="room-card-day">26</span>
+                            <span class="room-card-week">SAT</span>
+                        </div>
+                        <div class="room-card-body">
+                            <div class="room-card-top">
+                                <h4>Cleaning day</h4>
+                                <span class="room-badge maintenance">MAINTENANCE</span>
+                            </div>
+                            <div class="room-card-details">
+                                <span>⏰ 2:00 PM</span>
+                                <span>👥 3 housemates</span>
+                            </div>
+                        </div>
+                        <div class="room-card-end">
+                            <div class="room-avatars">
+                                <span class="room-avatar person-mi">MI</span>
+                                <span class="room-avatar person-yo">YO</span>
+                                <span class="room-avatar person-sa">SA</span>
+                            </div>
+                            <span class="room-arrow">›</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunday events -->
+                <div class="room-group" data-group-date="2026-04-27">
+                    <h3 class="room-group-title">SUN 27 APR</h3>
+
+                    <!-- Event card 3 -->
+                    <div class="room-card" data-event-id="evt-03" data-category="social">
+                        <div class="room-card-date">
+                            <span class="room-card-month">APR</span>
+                            <span class="room-card-day">27</span>
+                            <span class="room-card-week">SUN</span>
+                        </div>
+                        <div class="room-card-body">
+                            <div class="room-card-top">
+                                <h4>House dinner</h4>
+                                <span class="room-badge social">SOCIAL</span>
+                            </div>
+                            <div class="room-card-details">
+                                <span>⏰ 7:00 PM</span>
+                                <span>👥 3 housemates</span>
+                            </div>
+                        </div>
+                        <div class="room-card-end">
+                            <div class="room-avatars">
+                                <span class="room-avatar person-yo">YO</span>
+                                <span class="room-avatar person-sa">SA</span>
+                                <span class="room-avatar person-mi">MI</span>
+                            </div>
+                            <span class="room-arrow">›</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuesday events -->
+                <div class="room-group" data-group-date="2026-04-29">
+                    <h3 class="room-group-title">TUE 29 APR</h3>
+
+                    <!-- Event card 4 -->
+                    <div class="room-card" data-event-id="evt-04" data-category="finance">
+                        <div class="room-card-date">
+                            <span class="room-card-month">APR</span>
+                            <span class="room-card-day">29</span>
+                            <span class="room-card-week">TUE</span>
+                        </div>
+                        <div class="room-card-body">
+                            <div class="room-card-top">
+                                <h4>Rent due</h4>
+                                <span class="room-badge finance">FINANCE</span>
+                            </div>
+                            <div class="room-card-details">
+                                <span>⏰ All day</span>
+                                <span>👥 3 housemates</span>
+                            </div>
+                        </div>
+                        <div class="room-card-end">
+                            <div class="room-avatars">
+                                <span class="room-avatar person-yo">YO</span>
+                                <span class="room-avatar person-sa">SA</span>
+                                <span class="room-avatar person-mi">MI</span>
+                            </div>
+                            <span class="room-arrow">›</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JS code -->
+    <script src="events.js" defer></script>
+</body>
 </html>

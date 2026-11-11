@@ -1,1 +1,516 @@
 
+
+:root {
+    --plum-primary: #7a2748;
+    --plum-hover: #5e1a36;
+    --text-main: #2b1320;
+    --text-muted: #7c6370;
+    --card-pink: #f4e0e6;
+    --bg-top: #fbf1f4;
+    --bg-bottom: #f3e1e7;
+    --white: #ffffff;
+    --border-line: #efdde3;
+    --avatar-1: #8d3556;
+    --avatar-2: #a9506f;
+    --avatar-3: #6f2146;
+}
+
+/* 1. Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text-main);
+    background: linear-gradient(135deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+/* 2. Main App Box */
+.room-app {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    background: var(--bg-top);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(122, 39, 72, 0.08);
+}
+
+/* 3. Sidebar Menu */
+.room-sidebar {
+    width: 260px;
+    background: var(--bg-bottom);
+    border-right: 1px solid var(--border-line);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.room-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 10px;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(122, 39, 72, 0.04);
+}
+
+.room-logo {
+    background: var(--plum-primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.room-brand-text h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--plum-primary);
+}
+
+.room-brand-text p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.room-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.room-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.room-nav-item:hover {
+    background: var(--card-pink);
+}
+
+.room-nav-item.active {
+    background: var(--white);
+    color: var(--plum-primary);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(122, 39, 72, 0.05);
+}
+
+/* 4. Main Panel */
+.room-main {
+    flex-grow: 1;
+    padding: 32px 40px;
+    max-width: 840px;
+}
+
+.room-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.room-date-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.room-user-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.room-icon-btn {
+    background: var(--white);
+    border: 1px solid var(--border-line);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.room-user-badge {
+    background: var(--white);
+    border: 1px solid var(--border-line);
+    padding: 4px 12px 4px 4px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.room-avatar-circle {
+    background: var(--plum-primary);
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.room-username {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Page Header */
+.room-header-box {
+    margin-bottom: 24px;
+}
+
+.room-month-tag {
+    font-size: 0.85rem;
+    color: var(--plum-primary);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.room-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-header-box h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--text-main);
+}
+
+.room-action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Buttons */
+.room-btn-ghost {
+    background: var(--white);
+    border: 1px solid var(--border-line);
+    color: var(--text-main);
+    padding: 10px 18px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.room-btn-ghost:hover {
+    background: var(--card-pink);
+}
+
+.room-btn-solid {
+    background: var(--plum-primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(122, 39, 72, 0.2);
+}
+
+.room-btn-solid:hover {
+    background: var(--plum-hover);
+}
+
+/* Date Slider Bar */
+.room-date-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.room-date-card {
+    background: var(--white);
+    border: 1px solid var(--border-line);
+    padding: 12px 16px;
+    border-radius: 16px;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.room-day-name {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.room-day-num {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.room-date-card.active {
+    background: var(--plum-primary);
+    color: var(--white);
+    border-color: var(--plum-primary);
+}
+
+.room-date-card.active .room-day-name {
+    color: var(--card-pink);
+}
+
+.room-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--plum-primary);
+    border-radius: 50%;
+    margin-top: 2px;
+}
+
+.room-date-card.active .room-dot {
+    background: var(--white);
+}
+
+/* Filter Pills */
+.room-filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.room-filter-pill {
+    background: var(--white);
+    border: 1px solid var(--border-line);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.room-filter-pill.active {
+    background: var(--plum-primary);
+    color: var(--white);
+    border-color: var(--plum-primary);
+    font-weight: 600;
+}
+
+/* Event Cards */
+.room-events-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.room-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.room-group-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.room-card {
+    background: var(--white);
+    border-radius: 22px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(122, 39, 72, 0.04);
+    border: 1px solid var(--border-line);
+}
+
+.room-card-date {
+    background: var(--bg-top);
+    border: 1px solid var(--border-line);
+    border-radius: 14px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 55px;
+}
+
+.room-card-month {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.room-card-day {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.room-card-week {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.room-card-body {
+    flex-grow: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.room-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.room-card-top h4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Badges */
+.room-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.room-badge.household { background: #f4e0e6; color: var(--plum-primary); }
+.room-badge.maintenance { background: #e9def4; color: #4a287a; }
+.room-badge.social { background: #fde8e8; color: #8c2323; }
+.room-badge.finance { background: #e2f4ed; color: #1a6341; }
+
+.room-card-details {
+    display: flex;
+    gap: 16px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.room-card-end {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.room-avatars {
+    display: flex;
+    margin-right: -8px;
+}
+
+.room-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+    margin-left: -8px;
+}
+
+.person-yo { background: var(--avatar-1); }
+.person-sa { background: var(--avatar-2); }
+.person-mi { background: var(--avatar-3); }
+
+.room-arrow {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .room-app {
+        flex-direction: column;
+        border-radius: 0;
+        max-width: 430px;
+    }
+
+    .room-sidebar {
+        width: 100%;
+        padding: 16px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .room-brand {
+        margin-bottom: 0;
+        box-shadow: none;
+        padding: 0;
+        background: transparent;
+    }
+
+    .room-nav {
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .room-nav-item span:not(:first-child) {
+        display: none;
+    }
+
+    .room-sidebar-footer {
+        display: none;
+    }
+
+    .room-main {
+        padding: 20px 18px;
+    }
+
+    .room-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .room-action-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
