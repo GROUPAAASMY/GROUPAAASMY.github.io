@@ -1,0 +1,60 @@
+:root{ /*Couleur de la pastille des couleurs definie dans le guideline*/
+    --main-color: #7a2748;
+    --plum-hover: #5e1a36;
+    --text-main: #2b1320;
+    --text-muted: #7c6370;
+    --card-pink: #f4e0e6;
+    --bg-top: #fbf1f4;
+    --bg-bottom: #f3e1e7;
+    --white: #ffffff;
+    --border-line: #efdde3;
+    --avatar-1: #8d3556;
+    --avatar-2: #a9506f;
+    --avatar-3: #6f2146;
+}
+*{/*Reinitialisation de la page et definition de l'origine*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.sidebar{
+    position: fixed;
+    top:0;
+    left :0;
+    border-right:#f8f6f6 solid 1px;
+    
+    background-color:var(--card-pink);
+    padding: 0;
+    height: 100%;
+    width:200px;
+}
+.logo-img{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+}
+.logo-txt{
+    font-family: 'Merriweather';
+    font-size: 10px;
+    top :0;
+    left: 50px;
+}
+.txt1{
+
+}
+.txt2{
+
+}
+.menu-bar{
+
+}
+.menu-bar-text{
+
+}
+.menu-bar-text.active{
+
+}
+.menu-bar-text.footer{
+
+}
