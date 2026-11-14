@@ -16,55 +16,58 @@
     <div class="room-app">
 
         <!-- Sidebar menu -->
-        <aside class="room-sidebar">
-            <div class="room-brand">
-                <div class="room-logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <aside class="sidebar">
+            <div class="full-logo">
+                <div class="logo">
+                    <a href="HomePage.html" target="_self">
+                         <img src="logo.png"  alt="RoomBuddy"  width="50" height="50" >
+                    </a>
+                   
                 </div>
-                <div class="room-brand-text">
+                <div class="logo-text">
                     <h1>RoomBuddy</h1>
                     <p>home, together</p>
                 </div>
             </div>
 
-            <nav class="room-nav">
-                <a href="#" class="room-nav-item" data-page="home">
+            <nav class="navbar">
+                <a href="HomePage.html" class="navbar-text" data-page="home">
                     <span>🏠</span> Home
                 </a>
-                <a href="#" class="room-nav-item" data-page="tasks">
+                <a href="Tasks.html" class="navbar-text" data-page="tasks">
                     <span>✓</span> Tasks
                 </a>
-                <a href="#" class="room-nav-item" data-page="groceries">
+                <a href="Groceries.html" class="navbar-text" data-page="groceries">
                     <span>🛒</span> Groceries
                 </a>
-                <a href="#" class="room-nav-item" data-page="amenities">
+                <a href="Amenities.html" class="navbar-text" data-page="amenities">
                     <span>✨</span> Amenities
                 </a>
-                <a href="#" class="room-nav-item active" data-page="events" id="current-tab">
+                <a href="Events.html" class="navbar-text main" data-page="events" id="active-tab">
                     <span>📅</span> Events
                 </a>
             </nav>
 
-            <div class="room-sidebar-footer">
-                <a href="#" class="room-nav-item" data-page="settings">
+            <div class="footer">
+                <a href="Settings.html" class="navbar-text" data-page="settings">
                     <span>⚙️</span> Settings
                 </a>
             </div>
         </aside>
 
         <!-- Main content area -->
-        <main class="room-main">
+        <main class="main-content">
             
             <!-- Top bar -->
-            <header class="room-topbar">
-                <div class="room-date-label">Thursday, 24 April</div>
-                <div class="room-user-menu">
-                    <button class="room-icon-btn" id="notifications-btn" aria-label="Open notifications">
+            <header class="topbar">
+                <div class="date-label">Thursday, 24 April</div>
+                <div class="user-menu">
+                    <button class="icon-btn" id="notifications-btn" aria-label="Open notifications">
                         🔔
                     </button>
-                    <div class="room-user-badge">
-                        <span class="room-avatar-circle">YO</span>
-                        <span class="room-username">You</span>
+                    <div class="user-badge">
+                        <span class="avatar-circle">YO</span>
+                        <span class="username">You</span>
                     </div>
                 </div>
             </header>
