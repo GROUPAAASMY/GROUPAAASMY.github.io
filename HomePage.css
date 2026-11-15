@@ -22,7 +22,24 @@ body{
   border-right: 1px solid #eadce4
 }
 .logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
   padding: 5px 10px 40px;
+}
+.logo img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:10px;
+}
+.logo-text h2{
+  font-family: 'Playfair Display', serif;
+  font-size:21px;
+}
+.logo-text p{
+  font-size:12px;
+  margin-top:3px;
 }
 .logo h2{
   font-family: 'Playfair Display', serif;
