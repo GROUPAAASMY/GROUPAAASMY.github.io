@@ -1,9 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>HomePage</title>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Roombuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel = "stylesheet"
+      href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
   </head>
   <body>
+    <div class="container">
+      <!--Sidebar-->
+      <aside class="sidebar">
+        <div class ="logo">
+          <h2> Room Buddy</h2>
+          <p>Home, Together</p>
+        </div>
+        <nav>
+          <ul>
+            <li class = "active">
+              <i class = "fa-solid fa-house"></i>
+              Home
+            </li>
+            <li>
+              <i class = "fa-solid fa-check"></i>
+              Tasks
+            </li>
+            <li>
+              <i class= "fa solid fa-basket-shopping"></i>
+              Groceries
+            </li>
+            <li>
+              <i class="fa-regular fa-star"></i>
+              Events
+            </li>
+          </ul>
+        </nav>
+        <div class="settings">
+          <i class = "fa-solid fa-gear"></i>
+          Settings
+        </div>
+      </aside>
+      <!--Main-->
+      <main class = "content">
+        <heaader class = "topbar">
+          <span>Monday, 16 November</span>
+          <div class = "profile">
+            <button>
+              <i class = "fa-regular fa-bell"></i>
+            </button>
+            <div class = "avatar">
+              YO
+            </div>
+          </header>
+          <section class = "hero">
+            <p>Good morning,</p>
+            <h1>
+              Your home is looking<br>
+              good.
+            </h1>
+          </section>
+          <!--Status-->
+          <section class = "stats">
+            <div class = "card light-pink">
+              <div class = "card-header">
+                <h3>Tasks today</h3>
+                <i class = "fa-solid fa-check"></i>
+              </div>
+              <div class = "card-footer">
+                <h2>3</h2>
+                <p>1 already done</p>
+              </div>
+            </div>
+            <div class = "card lavender">
+              <div class = "card-header">
+                <h3>What's Cooking</h3>
+                <i class="fa-solid fa-basket-shopping"></i>
+              </div>
+              <div class="card-footer">
+                <h2>4</h2>
+                <p>1 item dibbed</p>
+              </div>
+            </div>
+          </section>
+          <!--Main-->
+            <section class = "dashboard">
+              <div class = "tasks-card">
+                <h2>Today's tasks</h2>
+                <p>A little effort goes a long way.</p>
+                <div class = "task">
+                  <input type="radio">
+                  <div>
+                    <h4>Take bins out</h4>
+                    <small>Before 8:00</small>
+                  </div>
+                  <span class = "badge purple">SA</span>
+                </div>
+                <span class = "bade red">YO</span>
+              </div>
+              <div class = "task completed">
+                <input checked type="checkbox">
+                <div>
+                  <h4>Wipe kitchen counters</h4>
+                  <small>Anytime today</small>
+                </div>
+                <span class="badge pink">MI</span>
+              </div>
+          </div>
+          <!--side-->
+          <div class = "side-cards">
+            <div class = "event-cards">
+              <span class = "label">COMING UP</span>
+              <h2>House dinner</h2>
+              <p2>Sunday at 5:00 PM</p2>
+              <button>See details</button>
+            </div>
+            <div class = "reminder-card">
+              <span class = "label">REMINDER</span>
+              <h2>Rent Due</h2>
+              <p>In 5 days • You're all cuaght up</p>
+              <button>See details</button>
+            </div>
+          </div>
+        </section> 
+      </main>
+    </div>
+    <script src = "js/app.js"></script>
+  
+  
+          
 
   </body>
 
