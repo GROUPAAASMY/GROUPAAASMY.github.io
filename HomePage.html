@@ -33,7 +33,11 @@
               Groceries
             </li>
             <li>
-              <i class="fa-regular fa-star"></i>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              Amenities
+            </li>
+            <li>
+              <i class="fa-regular fa-calender"></i>
               Events
             </li>
           </ul>
@@ -48,13 +52,14 @@
         <heaader class = "topbar">
           <span>Monday, 16 November</span>
           <div class = "profile">
-            <button>
+            <button aria-label="Notifications">
               <i class = "fa-regular fa-bell"></i>
             </button>
-            <div class = "avatar">
-              YO
-            </div>
-          </header>
+            
+            <div class = "avatar">YO</div>
+            <span>You</span>
+          </div>
+        </header>
           <section class = "hero">
             <p>Good morning,</p>
             <h1>
@@ -65,6 +70,7 @@
           <!--Status-->
           <section class = "stats">
             <div class = "card light-pink">
+              
               <div class = "card-header">
                 <h3>Tasks today</h3>
                 <i class = "fa-solid fa-check"></i>
@@ -74,53 +80,78 @@
                 <p>1 already done</p>
               </div>
             </div>
+            
             <div class = "card lavender">
               <div class = "card-header">
-                <h3>What's Cooking</h3>
+                <h3>What's Cooking?</h3>
                 <i class="fa-solid fa-basket-shopping"></i>
               </div>
+              
               <div class="card-footer">
                 <h2>4</h2>
                 <p>1 item dibbed</p>
               </div>
             </div>
           </section>
+          
           <!--Main-->
             <section class = "dashboard">
               <div class = "tasks-card">
                 <h2>Today's tasks</h2>
                 <p>A little effort goes a long way.</p>
+                
                 <div class = "task">
-                  <input type="radio">
+                  <input type="checkbox">
                   <div>
                     <h4>Take bins out</h4>
-                    <small>Before 8:00</small>
+                    <small>Before 8:00 PM</small>
                   </div>
+                  
                   <span class = "badge purple">SA</span>
+                  <i class="fa-solid fa-chevron-right"></i>
                 </div>
-                <span class = "bade red">YO</span>
+                <div class="task">
+                  <input type="checkbox">
+                  <div>
+                    <h4>Water the plants</h4>
+                    <small>Living room</small>
+                  </div>
+                <span class = "badge red">YO</span>
+                  <i class = "fa-solid fa-chevron-right"></i>
               </div>
+            
               <div class = "task completed">
-                <input checked type="checkbox">
+                <input checked type="checkbox" checked>
                 <div>
                   <h4>Wipe kitchen counters</h4>
                   <small>Anytime today</small>
                 </div>
+                
                 <span class="badge pink">MI</span>
               </div>
           </div>
+              
           <!--side-->
           <div class = "side-cards">
-            <div class = "event-cards">
+            <div class = "event-card">
+              <div class = "event-icon">
+                <i class = "fa-regular fa-calendar"></i>
+              </div>
+              
               <span class = "label">COMING UP</span>
               <h2>House dinner</h2>
               <p2>Sunday at 5:00 PM</p2>
               <button>See details</button>
             </div>
+                
             <div class = "reminder-card">
+              <div class = "reminder-icon">
+                <i class = "fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              
               <span class = "label">REMINDER</span>
               <h2>Rent Due</h2>
-              <p>In 5 days • You're all cuaght up</p>
+              <p>In 5 days · You're all cuaght up</p>
               <button>See details</button>
             </div>
           </div>
