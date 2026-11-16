@@ -3,7 +3,7 @@
     --plum-hover: #5e1a36;
     --text-main: #2b1320;
     --text-muted: #7c6370;
-    --card-pink: #f4e0e6;
+    --card-pink: #f7edf3;
     --bg-top: #fbf1f4;
     --bg-bottom: #f3e1e7;
     --white: #ffffff;
@@ -45,13 +45,15 @@ body{
     top :0;
     left: 50px;
 }
-/*
-.txt1{
+
+.sub-title h2{
+    font-size: 35px;
+    font-family: 'Merriweather';
 
 }
 .txt2{
 
-}*/
+}
 
 .menu-bar{
     display: flex;
@@ -71,6 +73,16 @@ body{
     font-weight: 500;
     font-size: 0.95rem;
     transition: background 0.2s;
+}
+.menu-bar-texts{
+    display: flex;
+    align-items: center;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 300px 16px ;
 }
 .menu-bar-text.active{
     background: var(--white);
@@ -113,7 +125,10 @@ body{
     gap: 8px;
 }
 .user-icon{
-    background: var(--white);
+    background: var(--avatar-1);
+    font-weight: bold;
+    font-family: Inter;
+    color: var(--white);
     border: 1px solid var(--border-line);
     width: 40px;
     height: 40px;
@@ -135,15 +150,36 @@ body{
     display: flex;
     gap: 10px;
 }
+.List-View-btn{
+    background-color: #7a2748;
+    color: var(--white);
+    font-family: Inter;
+    font-size: 0.9rem;
+    border:none;
+    border-radius: 50px;
+    gap: 8px;
+    padding: 12px 15px;
+
+}
+.Add-Event-btn{
+    background-color: #7a2748;
+    color: var(--white);
+    font-family: Inter;
+    font-size: 0.9rem;
+    border:none;
+    border-radius: 50px;
+    gap: 8px;
+    padding: 12px 15px;
+}
 /* Carte principale centrée et bien dimensionnée */
 .calendar-card {
-    margin-left: 450px;
+    margin-left: 300px;
     background: #ffffff;
-    padding: 30px;
+    padding: 30px 50px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     width: 100%;
-    max-width: 450px;
+    max-width: 900px;
     box-sizing: border-box; /* Empêche le padding de dépasser de l'écran */
 }
 
@@ -246,4 +282,19 @@ body{
 
 .calendar td.active-date .dot {
     background-color: #ffffff;
+}
+.daily-Events{
+    display: flex;
+    align-items: center;
+    padding: 20px 300px;
+}
+.Event-container{
+    background-color:var(--white);
+    padding: 25px 300px;
+    height: 120px;
+    width:900px;  
+    border-radius: 25px;
+    border-color: var(--main-color);
+    border-style: initial;
+    box-shadow: var(--border-line);
 }
