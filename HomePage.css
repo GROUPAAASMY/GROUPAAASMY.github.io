@@ -144,7 +144,7 @@
 .stats{
   display:grid;
   width:100%;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));  
   gap:16px;
   margin-top:0;
   margin-bottom:28px;
@@ -177,7 +177,7 @@
 }
 .card-footer{
   display:flex;
-  justify-conten:space-between;
+  justify-content:space-between;
   align-items:flex-end;
   margin-top:20px;
 }
@@ -229,6 +229,9 @@
   border-bottom:1px solid #eadce4;
   
 }
+.task .badge{
+  margin-left:auto;
+}
 .task:last-child{
   border-bottom:none;
 }
@@ -256,10 +259,7 @@
   font-size:13px;
   color: #604657;
 }
-.task.completed h4{
-  text.decoration:line-through;
-  color:927b8a;
-}
+
 .badge{
   width:44px;
   height:38px;
@@ -291,6 +291,11 @@
 }
 .event-card,
 .reminder-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:22px;
+  padding:24px;
+  color:white;
   width:100%;
   min-width:0;
   min-height:250px;
