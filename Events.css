@@ -289,12 +289,64 @@ body{
     padding: 20px 300px;
 }
 .Event-container{
-    background-color:var(--white);
-    padding: 25px 300px;
     height: 120px;
     width:900px;  
     border-radius: 25px;
     border-color: var(--main-color);
     border-style: initial;
     box-shadow: var(--border-line);
+}
+.Event-icon-hour{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Event-name {
+    font-family: 'Inter';
+    font-weight: bold;
+    padding: 50px ;
+}
+.Event-hour{
+    display: flex ;
+    align-items: center;
+    gap: 36px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.current-day{
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+.Event-type{
+    height: 88px;
+    width: 40px;
+    font-weight: 700;
+    padding-inline: 8px;
+    /*padding: 8px 12px;*/
+    border-radius: 25px;
+    background: var(--card-pink);
+    color:#5e1a36;
+    font-size: 0.65rem;
+    letter-spacing: 0.6em;
+    padding-block: 2px;
+
+}
+.avatar{
+    display: flex;
+    align-items: center;
+}
+.user-icon1{
+    background: var(--avatar-2);
+    font-weight: bold;
+    font-family: Inter;
+    color: var(--white);
+    border: 1px solid var(--border-line);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -8px;
 }
