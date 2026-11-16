@@ -1,1 +1,279 @@
+/*Basic setup */
+* {
+  box-sizing: border-box;   /*checked this part online to make sure boxes dont get bigger */
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #fcf9fb;   /* very light pink-white shade */
+  color: #1d1a22;              /* black text color */
+  display: flex;               /* puts sidebar and main side by side. */
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Sidebar code  */
+.sidebar {
+  width: 240px;
+  padding: 28px 12px;
+  background-color: #f5e6ee;   /* pretty soft pink */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #b8648b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.brand-name {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #3a2a3f;
+}
+
+.brand-tagline {
+  font-size: 12px;
+  color: #7a7283;
+}
+
+.menu {
+  flex: 1;   /* pushes Settings to the bottom */
+}
+
+.menu-item {
+  padding: 14px 18px;
+  margin-bottom: 6px;
+  border-radius: 14px;
+  color: #7a7283;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #fbeff5;/*hit or miss with this one i tried*/
+}
+
+.menu-item.active {
+  background-color: white;
+  color: #c2415f;   /*hit or miss with this one as well i tried*/
+}
+
+/* Main area */
+.main {
+  flex: 1;
+  padding: 28px 40px 50px 40px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 14px;
+  color: #7a7283;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bell,
+.user {
+  background-color: white;
+  border-radius: 25px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.bell {
+  width: 44px;
+  justify-content: center;
+}
+
+.user {
+  padding: 0 18px 0 6px;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #b8435f;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: normal;
+  font-size: 64px;
+  color: #5a1a6b;   /* deep purple shade!!! */
+  margin: 50px 0 60px 28px;
+}
+
+/* Two Columns and what not  */
+.columns {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  width: 320px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #4b1560;
+  margin: 0 0 8px 12px;
+}
+
+.green-check {
+  background-color: #4caf3e;
+  color: white;
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 14px;
+}
+
+/* Rounded boxes  */
+.box {
+  border-radius: 30px;
+  padding: 24px 36px;
+}
+
+.missing-box {
+  background-color: #f8e8ef;
+  min-height: 250px;
+  margin-bottom: 50px;
+  position: relative;  
+}
+
+.bought-box {
+  background-color: #f4e9f4;
+}
+
+.common-box {
+  background-color: #f3e6f1;
+  padding: 20px 28px;
+}
+
+/* ===Code for the missing and bought items */
+.box li {
+  font-size: 18px;
+}
+
+.item-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 8px 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.item-button:hover {
+  background-color: white;
+  border-radius: 8px;
+}
+
+#missing-list li,
+#bought-list li {
+  list-style: disc;     /*#Black bullet dots stuff*/ 
+  margin-left: 22px;
+}
+
+.empty-message {
+  color: #7a7283;
+  list-style: none !important;
+}
+
+/* ===== "ENTER ITEM" INPUT ===== */
+.add-row {
+  position: absolute;
+  top: 16px;
+  right: 80px;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.add-row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-style: italic;
+  padding: 6px;
+}
+
+/* Cute Plus buttons */
+#add-button,
+.plus-button {
+  background: none;
+  border: none;
+  color: #5b2a86;   /* purple */
+  font-size: 26px;
+  cursor: pointer;
+  width: 30px;
+}
+
+/*  Common items list! */
+#common-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 3px 0;
+}
+
+/* Purple card */
+.spending-card {
+  margin-top: 26px;
+  background-color: #5a1a6b;
+  color: white;
+  border-radius: 22px;
+  padding: 24px 28px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+}
