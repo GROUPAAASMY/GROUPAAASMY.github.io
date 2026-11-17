@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="Settings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Imported font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="Settings.js" defer></script>
+</head>
+<body style="background-color: #faf6f7;">
+   <div class="Sidebar"> <!-- Sidebar of the website-->   
+       <img src="Designer (6).png" id="logo"> <!-- Website's icon (Should be a hyperlink)-->
+       <div class="Title1"> <!-- Title1 Title2 and Subtitle are the title next to the logo-->
+           <h1>Room</h1>
+       </div>
+       <div class="Title2">
+           <h1>Buddy</h1>
+       </div>
+       <div class="Subtitle">
+           <h2>Home, together</h2>
+       </div>
+    </div>
+    <h1 id="Settingstext">Settings</h1>
+    <div class="Settingssections">
+    <div class="Accountsection">
 
+        <div class="Accountcontent1">
+           <span class="expand1">
+              <ion-icon name="chevron-forward-outline" id="Expandicon1"></ion-icon>
+              <h2 id="Account">Account</h2>
+              <h3 id="Safe">Keep your account safe and secure</h3>
+              <img src="lock-logo.png" alt="lock" id="locklogo">
+              <h3 id="Changepass">Change password</h3>
+           </span>
+        </div>
+        <div class="content2" hidden>
+            <input type="password" placeholder="Enter current password" id="Oldpassword">
+            <input type="password" placeholder="Enter new password" id="Newpassword">
+            <input type="password" placeholder="Confirm new password" id="Passwordconfirm">
+        </div>
+
+    </div>
+    <div class="House">
+
+        <div class="Name">
+           <span class="expand2">
+              <ion-icon name="chevron-forward-outline" id="Expandicon2"></ion-icon>
+              <h2 id="Family">Family</h2>
+              <img src="Home-logo.png" alt="lock" id="homelogo">
+              <h3 id="Naming">Family name</h3>
+           </span>
+        </div>
+        <div class="content2" hidden>
+            <input type="text" id="Housename">
+        </div>
+    </div>
+    <div class="Addmember">
+
+        <div class="Members">
+           <span class="expand3">
+              <ion-icon name="chevron-forward-outline" id="Expandicon3"></ion-icon>
+              <h2 id="Membertext">Members</h2>
+              <img src="Add-logo.png" alt="lock" id="addlogo">
+              <h3 id="Addtext">Add member</h3>
+           </span>
+        </div>
+        <div class="content2" hidden>
+            <input type="text" placeholder="Enter member email or username" id="Emailorusername">
+        </div>
+    </div>
+    <div class="Managemembers">
+
+        <div class="Members">
+           <span class="expand4">
+              <ion-icon name="chevron-forward-outline" id="Expandicon4"></ion-icon>
+              <img src="Manage-logo.png" alt="lock" id="managelogo">
+              <h3 id="Managetext">Manage members</h3>
+           </span>
+        </div>
+        <div class="content2" hidden>
+            <input type="text" placeholder="Enter member email or username" id="Emailorusername">
+        </div>
+    </div>
+    <div class="Logout">
+
+        <div class="logoutcontent">
+           <span class="expand5">
+              <ion-icon name="chevron-forward-outline" id="Expandicon4"></ion-icon>
+              <img src="gear-logo5.png" alt="lock" id="gearlogo">
+              <h3 id="Managetext">Log out</h3>
+           </span>
+        </div>
+    </div>
+
+   <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
