@@ -226,7 +226,8 @@ body{
   width: 700px;
   top: 60px;
   border: solid #999 1px;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   background-color: white;
 }
 .Addmember.isopen{
@@ -260,7 +261,8 @@ body{
   width: 700px;
   top: 60px;
   border: solid #999 1px;
-  border-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: white;
 }
 .Managemembers.isopen{
@@ -292,7 +294,7 @@ body{
   position: relative;
   height: 100px;
   width: 700px;
-  top: 60px;
+  top: 90px;
   border: solid #999 1px;
   border-radius: 15px;
   background-color: white;
