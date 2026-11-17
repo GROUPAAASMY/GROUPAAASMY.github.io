@@ -8,7 +8,7 @@
   position: fixed;
   background-color: #f2e6f0;
 }
-#logo{
+#logo{    /*Positionning the logo */
   border-radius: 10%;
   position: absolute;
   top: 20px;
@@ -49,7 +49,7 @@
   color: #391b32;
   font-size: 45px;
 }
-.Tobuy{
+.Tobuy{         /* Styling the list to buy */
   position: fixed;
   top: 100px;
   left: 230px;
@@ -57,7 +57,7 @@
   height: 400px;
   border: 0px;
 }
-#buyframe{
+#buyframe{     /* Styling the frame of the above list */   
   position: fixed;
   top: 170px;
   width: 520px;
@@ -66,28 +66,114 @@
   border-radius: 10px;
   overflow: hidden;
 }
-.Buylist{ /* In the buylist frame, style of the list */
+.Buylist{     /* In the buylist frame, style of the list */
   white-space: nowrap;
   top: 10px;
   left: 10px;
   font-size: 10px;
   font-family: 'Sans-serif', sans-serif;
 }
-#Column1{
+#Column1{     /* To seperate the list into two columns */
   position: absolute;
   top:50px;
   left: 30px;
 }
-#Column2{
-  position: absolute;
+#Column2{     /* Part of the above style */
+  position: absolute; 
   top:50px;
   left: 240px;
 }
-.Check{
-  border-radius: 30px;
-  width: 40px;
+.Check{   /* Style of the checkbox before checking */
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 15px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.Check:checked {     /* Fill color for a checked checkbox (rotation is for the checkmark)*/
+  background-color: #601A73;
+  border-color: #601A73;
+  transform: rotate(35deg);
+}
+.Check::after {      /* Making of the checkmark */
+  content: "_";
+  color: transparent;
+  width: 12px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  left: 6px;
+  top: 2px;
+  position: relative;
+}
+.Check:hover {   /* Style of the checkbox when hovered */
+  outline: none;
+  box-shadow: 0 0 5px #601A73;
+}
+.Check:focus {   /* Style of the checkbox when clicked */
+  outline: none;
+  border: 1px solid #601A73;
+  box-shadow: 0 0 5px #601A73;
 }
 ul{
   list-style-type: none;
   padding: 0;
+  font-family: sans-serif;
+}
+#item{
+  color: #391b32;
+  font-size: 30px;
+}
+#Additem{   /* Style of the input box to add an item */
+  position: absolute;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  top: 10px;
+  left: 350px;
+  width: 130px;
+  height: 25px;
+  border: 0;
+  border-radius: 10px;
+  background-color: white;
+}
+#Additem:hover{   /* Style of the input box when hovered */
+  outline: none;
+  box-shadow: 0 0 5px #601A73;
+  cursor: pointer;
+}
+#Additem:focus{   /* Style of the input box when clicked */
+  outline: none;
+  border: 1px solid #601A73;
+  box-shadow: 0 0 5px #601A73;
+}
+.Bought{         /* Styling the list of bought items */
+  position: fixed;
+  top: 400px;
+  left: 230px;
+  width: 500px;
+  height: 400px;
+  border: 0px;
+}
+#boughtframe{     /* Styling the frame of the above list */   
+  position: fixed;
+  top: 400px;
+  width: 520px;
+  height: 190px;
+  border: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#BoughtColumn1{
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+#BoughtColumn2{
+  position: absolute;
+  left: 240px;
+  top: 15px;
 }
