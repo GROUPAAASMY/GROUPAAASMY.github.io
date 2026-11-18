@@ -28,8 +28,10 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
                 ? boughtColumn1   //Shortened if statement (translates to if the above condition is true, BoughtColumn1 will be selected, otherwise BoughtColumn2 will be)
                 : boughtColumn2;
 
-            item.style.marginBottom = "12px"; //Sets the margin between items
+            const linebreakbought = boughtDoc.createElement("br") //Sets a linebreak to put below added items in bought list
+            
             destination.appendChild(item); //Moves the item to whichever column was selected
+            destination.appendChild(linebreakbought);
             return;
         }
 
