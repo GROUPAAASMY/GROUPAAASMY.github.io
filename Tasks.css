@@ -15,7 +15,7 @@ a {
   color: inherit;
 }
 
-/* Layout: sidebar on the left, content on the right */
+
 .container {
   display: flex;
   min-height: 100vh;
