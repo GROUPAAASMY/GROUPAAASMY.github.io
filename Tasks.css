@@ -88,7 +88,7 @@ a {
   gap: 14px;
 }
 
-/* Content */
+
 .content {
   flex: 1;
   min-width: 0;
@@ -144,7 +144,7 @@ a {
   margin-bottom: 0;
 }
 
-/* Progress cards */
+
 .stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -184,7 +184,7 @@ a {
   background: #731f55;
 }
 
-/* Task list */
+
 .tasks-card {
   background: white;
   border: 1px solid #eadce4;
@@ -268,7 +268,7 @@ a {
   font-size: 13px;
 }
 
-/* Add task form */
+
 #addForm {
   display: flex;
   gap: 12px;
@@ -297,7 +297,7 @@ a {
   background: #81245e;
 }
 
-/* Small screens */
+
 @media (max-width: 700px) {
   .container {
     flex-direction: column;
