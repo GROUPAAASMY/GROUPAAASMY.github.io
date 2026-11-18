@@ -50,32 +50,32 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
     boughtDoc.addEventListener("change", moveItem);
 
 
-    const textbox = buyDoc.getElementById("Additem");
+    const textbox = buyDoc.getElementById("Additem"); //Assigning a constant to the textbox
 
-    textbox.addEventListener("keydown", (event) => {
+    textbox.addEventListener("keydown", (event) => {  //Cancels the procedure when any othe key and enter is pressed
         if (event.key !== "Enter") return;
         event.preventDefault();
 
-        const itemName = textbox.value.trim();
-        if (!itemName) return;
+        const itemName = textbox.value.trim(); //Extracts the input item in the text box
+        if (!itemName) return; //Stops the procedure when nothing is written
 
-        const buyColumn1 = buyDoc.getElementById("Column1");
+        const buyColumn1 = buyDoc.getElementById("Column1"); //Assigning the buylist's columns to constants
         const buyColumn2 = buyDoc.getElementById("Column2");
-        const destination = buyColumn1.children.length <= buyColumn2.children.length
-            ? buyColumn1
+        const destination = buyColumn1.children.length <= buyColumn2.children.length //Choosing the destination of the new item depending on the longer column
+            ? buyColumn1 //Shortened if statement explained in groceries page
             : buyColumn2;
 
-        const item = buyDoc.createElement("li");
+        const item = buyDoc.createElement("li"); //Creating a new listed element, adding its checkbox and create a linebreak (that will be added later)
         const checkbox = buyDoc.createElement("input");
         const linebreak = buyDoc.createElement("br")
-        item.id = "item";
+        item.id = "item"; //Assigning the same item id and checkbox class to the new element to keep the style
         checkbox.type = "checkbox";
         checkbox.className = "Check";
 
-        item.appendChild(checkbox);
-        item.appendChild(buyDoc.createTextNode(` ${itemName}`));
-        destination.appendChild(item);
-        destination.appendChild(linebreak)
-        textbox.value = "";
+        item.appendChild(checkbox); //adding the checkbox to the item
+        item.appendChild(buyDoc.createTextNode(` ${itemName}`)); //Giving the item the name written in the text box
+        destination.appendChild(item); //Adding the item to the previously selected column
+        destination.appendChild(linebreak) //Adding the linebreak below the item
+        textbox.value = ""; //Removing the text in the textbox
     });
     }, { once: true });
