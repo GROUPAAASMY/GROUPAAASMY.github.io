@@ -1,146 +1,178 @@
-<!DOCTYPE html>
-<!--
-  Tasks.html  -  STRUCTURE ONLY.
-  This file says WHAT is on the page. It does not say what it looks like
-  (that is tasks.css) or what happens when you tap things (that is tasks.js).
--->
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Today's Tasks | RoomBuddy</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoomBuddy Tasks</title>
+    <link rel="stylesheet" href="Tasks.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-  <!-- Fonts (optional: the page still works with the fallback fonts if offline) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
-
-  <!-- Connects this page to its stylesheet -->
-  <link rel="stylesheet" href="tasks.css">
-</head>
-
-<body>
-  <div class="app">
-
-    <!-- ===== Header: logo, app name, bell, your avatar ===== -->
-    <header class="top">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#7a2748" stroke-width="1.8" stroke-linejoin="round">
-            <path d="M3 11 12 4l9 7v9H3z"/><circle cx="9.5" cy="14" r="1.5"/><circle cx="14.5" cy="14" r="1.5"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <strong>RoomBuddy</strong>
-          <small>Home. Together.</small>
-        </span>
-      </div>
-      <div class="top-actions">
-        <button class="icon-btn" aria-label="Notifications" id="bellBtn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15zM10 21h4"/></svg>
-        </button>
-        <span class="avatar me" title="You">YO</span>
-      </div>
-    </header>
-
-    <main>
-      <!-- ===== Page title ===== -->
-      <h1>Today's Tasks</h1>
-      <p class="subtitle">A little effort goes a long way.</p>
-
-      <!-- ===== Progress card: how many tasks are done ===== -->
-      <section class="progress-card" aria-label="Progress">
-        <div class="progress-left">
-          <span class="big-check" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>
-          </span>
-          <div>
-            <span class="label">Tasks Completed</span>
-            <span class="count"><span id="doneCount">1</span> / <span id="totalCount">5</span></span>
+  <body>
+    <div class="container">
+      <!--Sidebar-->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="mockups/Logo.png" alt="RoomBuddy logo" />
+          <div class="logo-text">
+            <h2>RoomBuddy</h2>
+            <p>Home, Together</p>
           </div>
         </div>
-        <!-- The ring is an SVG circle; tasks.js changes how much of it is filled -->
-        <div class="ring" role="img" aria-label="Percent complete" id="ring">
-          <svg viewBox="0 0 80 80" width="84" height="84">
-            <circle class="ring-bg" cx="40" cy="40" r="32"/>
-            <circle class="ring-fg" id="ringFg" cx="40" cy="40" r="32"/>
-          </svg>
-          <span class="ring-text"><b id="percent">20%</b><small>Complete</small></span>
+        <nav>
+          <ul>
+            <li>
+              <a href="HomePage.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+            </li>
+            <li class="active">
+              <i class="fa-solid fa-check"></i>
+              Tasks
+            </li>
+            <li>
+              <a href="Groceries.html">
+                <i class="fa-solid fa-basket-shopping"></i>
+                Groceries
+              </a>
+            </li>
+            <li>
+              <a href="Amenities.html">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Amenities
+              </a>
+            </li>
+            <li>
+              <a href="Events.html">
+                <i class="fa-regular fa-calendar"></i>
+                Events
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="settings">
+          <a href="Settings.html">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+          </a>
         </div>
-      </section>
+      </aside>
 
-      <!-- ===== List header + filter dropdown ===== -->
-      <div class="list-head">
-        <h2>Your Tasks</h2>
-        <label class="select-wrap">
-          <span class="sr-only">Filter tasks</span>
-          <select id="filter">
-            <option value="all">All Tasks</option>
-            <option value="mine">My Tasks</option>
-            <option value="done">Completed</option>
-          </select>
-        </label>
-      </div>
+      <!--Main-->
+      <main class="content">
+        <header class="topbar">
+          <span>Wednesday, 18 November</span>
+          <div class="profile">
+            <button aria-label="Notifications">
+              <i class="fa-regular fa-bell"></i>
+            </button>
+            <div class="avatar">YO</div>
+            <span>You</span>
+          </div>
+        </header>
 
-      <!-- ===== The task list. tasks.js fills this in from its data ===== -->
-      <ul class="task-list" id="taskList"></ul>
-      <p class="empty" id="empty" hidden>No tasks here yet.</p>
+        <section class="hero">
+          <p>Chores</p>
+          <h1>Today's Tasks</h1>
+          <p class="subtitle">A little effort goes a long way.</p>
+        </section>
 
-      <!-- ===== Add Task button (opens the form below) ===== -->
-      <button class="add-btn" id="addBtn" type="button">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-        Add Task
-      </button>
-    </main>
+        <!--Progress-->
+        <section class="stats">
+          <div class="card light-pink">
+            <h3>Tasks completed</h3>
+            <h2>
+              <span id="doneCount">1</span> / <span id="totalCount">5</span>
+            </h2>
+          </div>
+          <div class="card lavender">
+            <h3>Progress</h3>
+            <h2 id="percent">20%</h2>
+            <div class="bar">
+              <div class="bar-fill" id="barFill"></div>
+            </div>
+          </div>
+        </section>
 
-    <!-- ===== Bottom tab bar (links to the other pages in the repo) ===== -->
-    <nav class="tabs" aria-label="Main">
-      <a href="HomePage.html">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9H3z"/></svg>Home
-      </a>
-      <a href="Tasks.html" class="active" aria-current="page">
-        <span class="tab-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>Tasks
-      </a>
-      <!-- NOTE: the repo file is currently spelled "Grocies.html". If a teammate fixes the spelling, change it here too. -->
-      <a href="Grocies.html">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 9h16l-1.6 10H5.6zM8 9l3-5M16 9l-3-5"/></svg>Groceries
-      </a>
-      <a href="Amenities.html">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Amenities
-      </a>
-      <a href="Events.html">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Events
-      </a>
-    </nav>
-  </div>
+        <!--Task list-->
+        <section class="tasks-card">
+          <div class="list-top">
+            <h2>Your tasks</h2>
+            <select id="filter">
+              <option value="all">All tasks</option>
+              <option value="mine">My tasks</option>
+              <option value="done">Completed</option>
+            </select>
+          </div>
 
-  <!-- ===== Add Task form (a pop-up "dialog") ===== -->
-  <dialog id="addDialog" aria-labelledby="addTitle">
-    <form method="dialog" id="addForm">
-      <h3 id="addTitle">Add a task</h3>
-      <label>Task name
-        <input type="text" id="taskName" placeholder="e.g. Clean the fridge" maxlength="40" required>
-      </label>
-      <label>Who is doing it?
-        <select id="taskWho"></select>
-      </label>
-      <label>When?
-        <select id="taskWhen">
-          <option>Today</option>
-          <option>Tomorrow</option>
-          <option>Anytime this week</option>
-        </select>
-      </label>
-      <div class="dialog-actions">
-        <button type="button" class="btn" id="cancelAdd">Cancel</button>
-        <button type="submit" class="btn primary">Add</button>
-      </div>
-    </form>
-  </dialog>
+          <div id="taskList">
+            <div class="task" data-owner="SA">
+              <input type="checkbox" />
+              <div>
+                <h4>Take bins out</h4>
+                <small>Before 8:00 PM</small>
+              </div>
+              <span class="badge purple">SA</span>
+            </div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+            <div class="task" data-owner="YO">
+              <input type="checkbox" />
+              <div>
+                <h4>Water the plants</h4>
+                <small>Living room</small>
+              </div>
+              <span class="badge red">YO</span>
+            </div>
 
-  <!-- Connects this page to its behavior. "defer" = wait until the page is loaded -->
-  <script src="tasks.js" defer></script>
-</body>
+            <div class="task completed" data-owner="MI">
+              <input type="checkbox" checked />
+              <div>
+                <h4>Wipe kitchen counters</h4>
+                <small>Anytime today</small>
+              </div>
+              <span class="badge pink">MI</span>
+            </div>
+
+            <div class="task" data-owner="EM">
+              <input type="checkbox" />
+              <div>
+                <h4>Vacuum hallway</h4>
+                <small>Tomorrow, 10:00 AM</small>
+              </div>
+              <span class="badge purple">EM</span>
+            </div>
+
+            <div class="task" data-owner="YO">
+              <input type="checkbox" />
+              <div>
+                <h4>Laundry</h4>
+                <small>Anytime this week</small>
+              </div>
+              <span class="badge red">YO</span>
+            </div>
+          </div>
+
+          <p id="emptyMessage" hidden>No tasks here.</p>
+
+          <!--Add task-->
+          <form id="addForm">
+            <input
+              type="text"
+              id="newTask"
+              placeholder="New task, e.g. Clean the fridge"
+            />
+            <button type="submit" class="add-btn">
+              <i class="fa-solid fa-plus"></i>
+              Add Task
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="Tasks.js"></script>
+  </body>
 </html>

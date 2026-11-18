@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoomBuddy Invite</title>
+    <link rel="stylesheet" href="InvitePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="invite-container">
+      <!--Left side-->
+      <div class="left-panel">
+        <div class="logo">
+          <img src="mockups/Logo.png" alt="RoomBuddy logo" />
+          <div>
+            <h2>RoomBuddy</h2>
+            <p>Home, Together</p>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <span>STEP 2 OF 2</span>
+          <h1>Home is better together.</h1>
+          <p>
+            Invite your housemates now so everyone can share tasks, plans, and
+            the little things that keep home running.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="steps-text">
+            <span>Household</span>
+            <span>Invite</span>
+          </div>
+          <div class="steps-bar"></div>
+        </div>
+      </div>
+
+      <!--Right side-->
+      <div class="right-panel">
+        <div class="form-container">
+          <a href="Create%20a%20Family.html" class="back-btn" aria-label="Go back">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+
+          <h1>Invite your household.</h1>
+          <p class="subtitle">
+            Share this QR code or family code with the people joining your home.
+          </p>
+
+          <div class="invite-card">
+            <div class="qr-box">
+              <img src="InviteQR.png" alt="QR code to join the household" />
+            </div>
+
+            <div class="code-box">
+              <div>
+                <small>Family code</small>
+                <p id="familyCode">RB-7DK2-PX9M</p>
+              </div>
+              <button type="button" id="copyBtn" aria-label="Copy family code">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <button type="button" id="shareBtn" class="share-btn">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              Share invite link
+            </button>
+            <p id="message"></p>
+
+            <div class="divider">
+              <span>OR</span>
+            </div>
+
+            <div class="join-box">
+              <p>Want to join someone else's household?</p>
+              <a href="Join.html">
+                <button type="button" class="join-btn">
+                  <i class="fa-solid fa-user-group"></i>
+                  Join someone else's household
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <a href="HomePage.html" class="later">I'll invite people later</a>
+        </div>
+      </div>
+    </div>
+    <script src="InvitePage.js"></script>
+  </body>
+</html>

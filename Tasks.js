@@ -1,7 +1,7 @@
 const filter = document.getElementById('filter');
 const taskList = document.getElementById('taskList');
 
-
+// Updates the numbers and the progress bar
 function updateCount(){
   const total = document.querySelectorAll('.task').length;
   const done = document.querySelectorAll('.task input:checked').length;
@@ -12,7 +12,7 @@ function updateCount(){
   document.getElementById('barFill').style.width = percent + '%';
 }
 
-
+// Shows only the tasks that match the dropdown
 function showTasks(){
   document.querySelectorAll('.task').forEach(task => {
     const checked = task.querySelector('input').checked;
@@ -27,7 +27,7 @@ function showTasks(){
   });
 }
 
-
+// When a checkbox is clicked, add or remove the 'completed' class
 document.querySelectorAll('.task input').forEach(item => {
   item.addEventListener('change', () => {
     const task = item.closest('.task');
@@ -43,7 +43,7 @@ document.querySelectorAll('.task input').forEach(item => {
 
 filter.addEventListener('change', showTasks);
 
-
+// Adds a new task when the form is submitted
 document.getElementById('addForm').addEventListener('submit', event => {
   event.preventDefault();
   const input = document.getElementById('newTask');

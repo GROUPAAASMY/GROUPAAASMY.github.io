@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fbf8fa;
+}
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+}
+
+.invite-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left side */
+.left-panel {
+  width: 45%;
+  background: #731f55;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: #f7edf3;
+  border-radius: 12px;
+  padding: 4px;
+}
+.logo h2 {
+  margin: 0;
+  font-size: 30px;
+}
+.logo p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.hero-content {
+  max-width: 420px;
+}
+.hero-content span {
+  letter-spacing: 2px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.hero-content h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 20px 0;
+}
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.steps-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+.steps-bar {
+  height: 4px;
+  border-radius: 4px;
+  background: white;
+}
+
+/* Right side */
+.right-panel {
+  width: 55%;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #eadce4;
+  color: #731f55;
+  font-size: 12px;
+}
+.form-container h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  color: #32162a;
+  margin: 10px 0 12px;
+}
+.subtitle {
+  color: #927b8a;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Invite card */
+.invite-card {
+  background: white;
+  border: 1px solid #eadce4;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(80, 30, 60, 0.06);
+}
+.qr-box {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #f3dfe4;
+}
+.qr-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+.code-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: #fbf8fa;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+.code-box small {
+  font-size: 11px;
+  color: #927b8a;
+}
+.code-box p {
+  margin: 2px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #731f55;
+}
+.code-box button {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #eadce4;
+  background: white;
+  color: #731f55;
+  cursor: pointer;
+}
+.share-btn {
+  width: 100%;
+  border: none;
+  background: #731f55;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.share-btn:hover {
+  background: #81245e;
+}
+#message {
+  min-height: 18px;
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #731f55;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 14px 0;
+  color: #927b8a;
+  font-size: 12px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eadce4;
+}
+.join-box {
+  background: #f3dfe4;
+  border-radius: 14px;
+  padding: 16px;
+}
+.join-box p {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #735b6b;
+}
+.join-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #731f55;
+  background: white;
+  color: #731f55;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.later {
+  display: block;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #927b8a;
+}
+
+/* Small screens */
+@media (max-width: 800px) {
+  .invite-container {
+    flex-direction: column;
+  }
+  .left-panel {
+    width: auto;
+    gap: 24px;
+    padding: 25px;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .steps {
+    display: none;
+  }
+  .right-panel {
+    width: auto;
+    padding: 30px 20px;
+  }
+}
