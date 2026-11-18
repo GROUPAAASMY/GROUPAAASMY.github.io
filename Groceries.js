@@ -69,7 +69,7 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
 
         const item = buyDoc.createElement("li");
         const checkbox = buyDoc.createElement("input");
-        const linebreak = buyDoc.createElement("br")
+        const linebreak = buyDoc.createElement("br");
         item.id = "item";
         checkbox.type = "checkbox";
         checkbox.className = "Check";
