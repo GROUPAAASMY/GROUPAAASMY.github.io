@@ -27,9 +27,9 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
             const destination = boughtColumn1.children.length <= boughtColumn2.children.length
                 ? boughtColumn1   //Shortened if statement (translates to if the above condition is true, BoughtColumn1 will be selected, otherwise BoughtColumn2 will be)
                 : boughtColumn2;
+                
+            const linebreakbought = boughtDoc.createElement("br")
 
-            const linebreakbought = boughtDoc.createElement("br") //Sets a linebreak to put below added items in bought list
-            
             destination.appendChild(item); //Moves the item to whichever column was selected
             destination.appendChild(linebreakbought);
             return;
@@ -52,32 +52,32 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
     boughtDoc.addEventListener("change", moveItem);
 
 
-    const textbox = buyDoc.getElementById("Additem"); //Assigning a constant to the textbox
+    const textbox = buyDoc.getElementById("Additem");
 
-    textbox.addEventListener("keydown", (event) => {  //Cancels the procedure when any othe key and enter is pressed
+    textbox.addEventListener("keydown", (event) => {
         if (event.key !== "Enter") return;
         event.preventDefault();
 
-        const itemName = textbox.value.trim(); //Extracts the input item in the text box
-        if (!itemName) return; //Stops the procedure when nothing is written
+        const itemName = textbox.value.trim();
+        if (!itemName) return;
 
-        const buyColumn1 = buyDoc.getElementById("Column1"); //Assigning the buylist's columns to constants
+        const buyColumn1 = buyDoc.getElementById("Column1");
         const buyColumn2 = buyDoc.getElementById("Column2");
-        const destination = buyColumn1.children.length <= buyColumn2.children.length //Choosing the destination of the new item depending on the longer column
-            ? buyColumn1 //Shortened if statement explained in groceries page
+        const destination = buyColumn1.children.length <= buyColumn2.children.length
+            ? buyColumn1
             : buyColumn2;
 
-        const item = buyDoc.createElement("li"); //Creating a new listed element, adding its checkbox and create a linebreak (that will be added later)
+        const item = buyDoc.createElement("li");
         const checkbox = buyDoc.createElement("input");
         const linebreak = buyDoc.createElement("br")
-        item.id = "item"; //Assigning the same item id and checkbox class to the new element to keep the style
+        item.id = "item";
         checkbox.type = "checkbox";
         checkbox.className = "Check";
 
-        item.appendChild(checkbox); //adding the checkbox to the item
-        item.appendChild(buyDoc.createTextNode(` ${itemName}`)); //Giving the item the name written in the text box
-        destination.appendChild(item); //Adding the item to the previously selected column
-        destination.appendChild(linebreak) //Adding the linebreak below the item
-        textbox.value = ""; //Removing the text in the textbox
+        item.appendChild(checkbox);
+        item.appendChild(buyDoc.createTextNode(` ${itemName}`));
+        destination.appendChild(item);
+        destination.appendChild(linebreak)
+        textbox.value = "";
     });
     }, { once: true });
