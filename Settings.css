@@ -68,7 +68,7 @@ body{
     border-radius: 15px;;
     background-color: white;
 }
-.Accountsection.isopen{
+.Accountsection.isopen{  /* For each "isopen" adding, the height is increased to match the space addded with the previously hidden content*/
   height: 400px;
 }
 #Account,
@@ -115,7 +115,7 @@ body{
 #Expandicon2.open,
 #Expandicon3.open,
 #Expandicon4.open{
-  transform: rotate(90deg);
+  transform: rotate(90deg); /*Rotates the clicked chevron (read corresponding js to see how the open class part is added */
 }
 #Oldpassword{
   position: absolute;
