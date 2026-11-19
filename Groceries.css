@@ -4,9 +4,9 @@
   padding: 0;
   border-right:#999 solid 1px;  
   height: 100%;
-  width: 200px;
+  width: 240px;
   position: fixed;
-  background-color: ##f7edf3;
+  background-color: #f7edf3;
 }
 #logo{    /*Positionning the logo */
   border-radius: 10%;
@@ -43,10 +43,11 @@
 }
 h4{
   position: relative;
-  left:30px;
+  left:50px;
   margin-top: 0;
   top: 0;
   font-family: sans-serif;
+  font-weight: 10;
 
 }
 i{
@@ -59,8 +60,8 @@ i{
   top: 130px;
   left: 25px;
   width: 100px;
-  color: #666;
-  font-family: sans-serif;
+  color: #927b8a;
+   font-family: "Inter", sans-serif;
 }
 #Hometab,
 #Taskstab,
@@ -82,14 +83,14 @@ i{
 #Taskstab:hover{
   cursor: pointer;
   background-color: white;
-  color: #601A73;
+  color: #81245e;
 }
 #Taskstab{
   top: 10px;
 }
 #Groceriestab{
   background-color: white;
-  color: #601A73;
+  color: #81245e;
   top: 20px;
 }
 #Amenitiestab{
@@ -99,16 +100,23 @@ i{
   top: 40px;
 }
 #Settingstab{
-  top: 250px;
+  top: 245px;
 }
 a{  /* Removes the underline and blue color given to the icons with the hyperlink being assigned to them */
   text-decoration: none;
   color: inherit;
 }
+#date{
+  position: absolute;
+  left: 270px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 10;
+}
 #Grocerytext{ /* Big phrase of the page */
   position: fixed;
   top: 30px;
-  left: 230px;
+  left: 270px;
   font-family: 'DM Serif Display', serif;
   color: #391b32;
   font-size: 45px;
@@ -124,7 +132,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 h3{
   font-family: sans-serif;
   color: #601A73;
-  left: 240px;
+  left: 280px;
 }
 #Buytext{
   position: absolute;
@@ -137,6 +145,7 @@ h3{
 #buyframe{     /* Styling the frame of the above list */   
   position: fixed;
   top: 170px;
+  left: 270px;
   width: 580px;
   height: 190px;
   border: 0px;
@@ -240,6 +249,7 @@ li{
 }
 #boughtframe{     /* Styling the frame of the above list */   
   position: fixed;
+  left: 270px;
   top: 400px;
   width: 580px;
   height: 190px;
@@ -262,7 +272,7 @@ li{
   background-color: #efe8f1;
   width: 250px;
   height: 420px;
-  left: 860px;
+  left: 900px;
   top: 170px;
   border-radius: 10px;
 }
@@ -289,6 +299,42 @@ p{
 }
 #Commonitems{
   position: absolute;
-  left: 870px;
+  left: 910px;
   top: 127px;
+}
+#Bell{
+  position: absolute;
+  top: 25px;
+  left: 1200px;
+  display: flex;
+  color: #81245e;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: 1px solid #927b8a;
+}
+#Bell:hover{
+  cursor: pointer;
+}
+#Profile{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
+  left: 1260px;
+  height: 40px;
+  width: 40px;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+  font-weight: 10;
+  color: white;
+  background-color: #a62940;
+  border-radius: 50px;
+}
+#Profile:hover{
+  cursor: pointer;
 }
