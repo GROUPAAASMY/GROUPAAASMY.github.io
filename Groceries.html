@@ -6,11 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Imported font -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <script src="Groceries.js" defer></script>
 </head>
-<body>
+<body style="background-color: #faf6f7;">
     <div class="Sidebar"> <!-- Sidebar of the website-->   
-       <img src="logo.png" id="logo"> <!-- Website's icon (Should be a hyperlink)-->
+       <a href="HomePage.html"><img src="logo.png" id="logo"></a> <!-- Website's icon (Should be a hyperlink)-->
        <div class="Title1"> <!-- Title1 Title2 and Subtitle are the title next to the logo-->
            <h1>Room</h1>
        </div>
@@ -20,6 +21,36 @@
        <div class="Subtitle">
            <h2>Home, together</h2>
        </div>
+       <div class="icons">
+         <a href="HomePage.html">
+           <div id="Hometab">
+              <i class="fa-solid fa-house"></i><h4>Home</h4>
+           </div>
+         </a>
+         <a href="Tasks.html">
+           <div id="Taskstab">
+              <i class="fa-solid fa-check"></i><h4>Tasks</h4>
+           </div>
+           <div id="Groceriestab">
+              <i class="fa-solid fa-basket-shopping"></i><h4>Groceries</h4>
+           </div>
+         <a href="Amenities.html">
+           <div id="Amenitiestab">
+              <i class="fa-solid fa-wand-magic-sparkles"></i><h4>Amenities</h4>
+           </div>
+         </a>
+         <a href="Events.html">
+           <div id="Eventstab">
+              <i class="fa-solid fa-calendar"></i><h4>Events</h4>
+           </div>
+         </a>
+         <a href="Settings.html">
+           <div id="Settingstab">
+              <i class="fa-solid fa-gear"></i><h4>Settings</h4>
+           </div>
+         </a>
+        
+       </div>
     </div>
     <h1 id="Grocerytext">Quick stop for groceries?</h1>
     <div class="Tobuy">
@@ -27,5 +58,17 @@
     </div>
     <div class="Bought">
        <iframe src="Groceries bought.html" id="boughtframe" scrolling="auto"></iframe> <!-- Frame for the list of groceries bought -->
+    </div>
+    <div class="Quickadd">
+        <ul id="Common">
+            <br>
+            <li id="item"><p class="plus">+</p>Milk</li>
+            <li id="item"><p class="plus">+</p>Bananas</li>
+            <li id="item"><p class="plus">+</p>Yogurt</li>
+            <li id="item"><p class="plus">+</p>Eggs</li>
+            <li id="item"><p class="plus">+</p>Butter</li>
+            <li id="item"><p class="plus">+</p>Bread</li>
+            <li id="item"><p class="plus">+</p>Apples</li>
+        </ul>
     </div>
 </body>
