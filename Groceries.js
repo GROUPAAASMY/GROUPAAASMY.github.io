@@ -27,11 +27,9 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
             const destination = boughtColumn1.children.length <= boughtColumn2.children.length
                 ? boughtColumn1   //Shortened if statement (translates to if the above condition is true, BoughtColumn1 will be selected, otherwise BoughtColumn2 will be)
                 : boughtColumn2;
-                
-            const linebreakbought = boughtDoc.createElement("br")
+
 
             destination.appendChild(item); //Moves the item to whichever column was selected
-            destination.appendChild(linebreakbought);
             return;
         }
 
@@ -80,4 +78,28 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
         destination.appendChild(linebreak)
         textbox.value = "";
     });
+
+    document.querySelectorAll(".plus").forEach((plus) => { //Selects every element with the plus class, the 'forEach(plus)' part allows the function to execute without using all plus elements simultaneously as input
+    plus.addEventListener("click", () => {
+        const itemName = plus.closest("li").textContent.replace("+", "").trim(); //Extracts the text from the corresponding list element and removes the +
+
+        const column1 = buyDoc.getElementById("Column1");
+        const column2 = buyDoc.getElementById("Column2");
+        const destination = column1.children.length <= column2.children.length  //Destination selecting procedure is the same every time
+            ? column1
+            : column2;
+
+        const item = buyDoc.createElement("li"); //Creates a new 'li' element
+        const checkbox = buyDoc.createElement("input"); //Creates its corresponding input
+        checkbox.type = "checkbox"; //Makes the input a checkbox (And gives it the checkbox class on the line below)
+        checkbox.className = "Check";
+        item.id = 'item' //Assigns the item id to the new element
+
+        item.appendChild(checkbox); //Appending system is the same as when moving an element to the bought list
+        item.appendChild(buyDoc.createTextNode(` ${itemName}`));
+        destination.appendChild(item);
+    });
+});
+
+    
     }, { once: true });
