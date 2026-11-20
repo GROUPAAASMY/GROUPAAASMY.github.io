@@ -8,7 +8,7 @@ body{
   border-right:#999 solid 1px;  
   height: 100%;
   width: 240px;
-  position: fixed;
+  position: fixed; /* Important to make the sidebar unscrollable */
   z-index: 1;
   background-color: #f7edf3;
 }
@@ -82,7 +82,7 @@ i{
   align-items: center;
   border-radius: 15px;
 }
-#Hometab:hover,
+#Hometab:hover,  /* For each icon, setting the font color and background color for when it's hovered*/
 #Taskstab:hover,
 #Groceriestab:hover,
 #Amenitiestab:hover,
@@ -91,7 +91,7 @@ i{
   background-color: white;
   color: #81245e;
 }
-#Taskstab{
+#Taskstab{ /* Positionning each tab*/
   top: 10px;
 }
 #Groceriestab{
@@ -112,7 +112,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
   text-decoration: none;
   color: inherit;
 }
-#Settingstext{
+#Settingstext{ /* Big text of the page */
     position: absolute;
     font-size: 45px;
     font-family: 'DM Serif Display', serif;
