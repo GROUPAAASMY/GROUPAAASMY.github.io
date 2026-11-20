@@ -492,3 +492,26 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 #Profile:hover{
   cursor: pointer;
 }
+.Commit{
+  position: absolute;
+  appearance: none;
+  height: 40px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  background-color: #601A73;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+}
+.Commit:hover{
+  cursor: pointer;
+}
+#Button1{
+  top: 350px;
+  left: 550px;
+}
+#Button2{
+  top: 300px;
+  left: 550px;
+}
