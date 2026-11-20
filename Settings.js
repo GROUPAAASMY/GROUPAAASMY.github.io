@@ -1,4 +1,4 @@
-document.querySelectorAll('.Accountsection, .House, .Addmember, .Managemembers').forEach(section => { //Selecting every division containing blocks (both the expandable and header part)
+document.querySelectorAll('.Accountsection, .House, .Managemembers').forEach(section => { //Selecting every division containing blocks (both the expandable and header part)
     const details = section.querySelector('.content2'); //For each division, selecting the expandable part
     const icon = section.querySelector('ion-icon'); //For each division, selecting its chevron
 
