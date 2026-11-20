@@ -9,6 +9,10 @@
   font-family: 'Inter', sans-serif;
   color:#321629
 }
+a{  /* Removes the blue color and underline from making a text element a hyperlink*/
+  text-decoration: none;
+  color: inherit;
+}
 .container{
   display:flex;
   min-height:100vh;
