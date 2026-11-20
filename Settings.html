@@ -5,11 +5,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Imported font -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <script src="Settings.js" defer></script>
 </head>
 <body>
    <div class="Sidebar"> <!-- Sidebar of the website-->   
-       <img src="logo.png" id="logo"> <!-- Website's icon (Should be a hyperlink)-->
+       <a href="HomePage.html"><img src="logo.png" id="logo"></a>
        <div class="Title1"> <!-- Title1 Title2 and Subtitle are the title next to the logo-->
            <h1>Room</h1>
        </div>
@@ -19,6 +21,39 @@
        <div class="Subtitle">
            <h2>Home, together</h2>
        </div>
+       <div class="icons">
+          <a href="HomePage.html">
+           <div id="Hometab">
+              <i class="fa-solid fa-house"></i><h4>Home</h4>
+           </div>
+          </a>
+          <a href="Tasks.html">
+           <div id="Taskstab">
+              <i class="fa-solid fa-check"></i><h4>Tasks</h4>
+           </div>
+          </a>
+          <a href="Groceries.html">
+           <div id="Groceriestab">
+              <i class="fa-solid fa-basket-shopping"></i><h4>Groceries</h4>
+           </div>
+          </a>
+          <a href="Amenities.html">
+           <div id="Amenitiestab">
+              <i class="fa-solid fa-wand-magic-sparkles"></i><h4>Amenities</h4>
+           </div>
+          </a>
+          <a href="Events.html">
+           <div id="Eventstab">
+              <i class="fa-solid fa-calendar"></i><h4>Events</h4>
+           </div>
+          </a>
+           <div id="Settingstab">
+              <i class="fa-solid fa-gear"></i><h4>Settings</h4>
+           </div>
+        
+       </div>
+ <i id="Bell" class="fa-regular fa-bell"></i>
+ <div id="Profile"><h2>YO</h2></div>
     </div>
     <h1 id="Settingstext">Settings</h1>
     <div class="Settingssections">
@@ -28,8 +63,9 @@
            <span class="expand1">
               <ion-icon name="chevron-forward-outline" id="Expandicon1"></ion-icon>
               <h2 id="Account">Account</h2>
+              <p class="section-description" id="Accountp">Update the password you use to sign in</p>
               <h3 id="Safe">Keep your account safe and secure</h3>
-              <img src="lock-logo.png" alt="lock" id="locklogo">
+              <i class="fa-solid fa-lock" id="locklogo"></i>
               <h3 id="Changepass">Change password</h3>
            </span>
         </div>
@@ -43,10 +79,12 @@
     <div class="House">
 
         <div class="Name">
+         <h3 id="Safe">A little organization for everyone under your roof</h3>
            <span class="expand2">
               <ion-icon name="chevron-forward-outline" id="Expandicon2"></ion-icon>
-              <h2 id="Family">Family</h2>
-              <img src="Home-logo.png" alt="lock" id="homelogo">
+              <h2 id="Family">Household</h2>
+              <p class="section-description" id="Namep">Give your shared space a name</p>
+              <i class="fa-solid fa-house"id="homelogo"></i>
               <h3 id="Naming">Family name</h3>
            </span>
         </div>
@@ -58,14 +96,11 @@
 
         <div class="Members">
            <span class="expand3">
-              <ion-icon name="chevron-forward-outline" id="Expandicon3"></ion-icon>
-              <h2 id="Membertext">Members</h2>
-              <img src="Add-logo.png" alt="lock" id="addlogo">
+              <a href="Addmember.html"><ion-icon name="chevron-forward-outline" id="Expandicon3"></ion-icon></a>
+              <i class="fa-solid fa-plus"id="addlogo"></i>
               <h3 id="Addtext">Add member</h3>
+              <p class="section-description" id="Addp">Invite someone to join your household</p>
            </span>
-        </div>
-        <div class="content2" hidden>
-            <input type="text" placeholder="Enter member email or username" id="Emailorusername">
         </div>
     </div>
     <div class="Managemembers">
@@ -73,8 +108,9 @@
         <div class="Members">
            <span class="expand4">
               <ion-icon name="chevron-forward-outline" id="Expandicon4"></ion-icon>
-              <img src="Manage-logo.png" alt="lock" id="managelogo">
+              <i class="fa-solid fa-user" id="managelogo"></i>
               <h3 id="Managetext">Manage members</h3>
+              <p class="section-description" id="Managep">View your household and manage who's part of it</p>
            </span>
         </div>
         <div class="content2" hidden>
@@ -85,9 +121,10 @@
 
         <div class="logoutcontent">
            <span class="expand5">
-              <ion-icon name="chevron-forward-outline" id="Expandicon5" href="Login.html"></ion-icon>
-              <img src="gear-logo5.png" alt="lock" id="gearlogo">
-              <h3 id="Managetext">Log out</h3>
+              <a href="Login.html"><ion-icon name="chevron-forward-outline" id="Expandicon5"></ion-icon></a>
+              <i class="fa-solid fa-gear" id="gearlogo"></i>
+              <h3 id="Logouttext">Log out</h3>
+              <p class="section-description" id="Logoutp">Sign out of Room Buddy on this device</p>
            </span>
         </div>
     </div>
