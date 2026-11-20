@@ -8,4 +8,16 @@ document.querySelectorAll('.Accountsection, .House, .Managemembers').forEach(sec
         icon.classList.toggle('open', !details.hidden); //Adds the 'open' class to the corresponding chevron
     });
 });
+const button1 = document.getElementById('Button1')
+const button2 = document.getElementById('Button2')
+
+    button1.addEventListener('click', () => {
+        document.querySelectorAll('.Pass').forEach(input =>{
+            input.value='';
+        });
+    });
+    button2.addEventListener('click' , () => {
+        const name = document.getElementById('Housename')
+        name.value='';
+    });
 
