@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Amenities</title>
-<!--(Link to our CSS file)-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amenities</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="Amenities.css">
-<script type="module" src="Amenities.js"></script>
+
+  <script type="module" src="Amenities.js"></script>
 </head>
 <body>
-    <div class="sidebar">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
     <div class="brand">
       <div class="logo">🏠</div>
       <div>
@@ -19,22 +28,65 @@
     <ul class="menu">
       <li class="menu-item">🏡 Home</li>
       <li class="menu-item">✔ Tasks</li>
-      <li class="menu-item active">🧺 Groceries</li>
-      <li class="menu-item">🧴 Amenities</li>
+      <li class="menu-item">🧺 Groceries</li>
+      <li class="menu-item active">🧴 Amenities</li>
       <li class="menu-item">📅 Events</li>
     </ul>
 
     <div class="menu-item settings">⚙ Settings</div>
   </div>
 
+  <!-- Main area -->
+  <main class="main">
 
-<body>
-
-    <div class="sidebar">
-
+    <div class="top-bar">
+      <div class="date" id="date"></div>
+      <div class="top-right">
+        <div class="bell">🔔</div>
+        <div class="user">
+          <div class="avatar">YOU</div>
+          <span>Roommate</span>
+        </div>
+      </div>
     </div>
 
-    <h1>Amenities</h1>
+    <h1 class="page-title">Amenities</h1>
+
+    <div class="columns">
+
+      <div class="left-column">
+        <h2>Missing items</h2>
+        <div class="box missing-box">
+          <div class="add-row">
+            <input type="text" id="item-input" placeholder="Enter item">
+            <button id="add-button" type="button">+</button>
+          </div>
+          <ul id="missing-list">
+            <li class="empty-message">Nothing missing!</li>
+          </ul>
+        </div>
+
+        <h2>Bought items <span class="green-check">✓</span></h2>
+        <div class="box bought-box">
+          <ul id="bought-list">
+            <li class="empty-message">Nothing bought yet.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <h2>Common items</h2>
+        <div class="box common-box">
+          <ul id="common-list"></ul>
+        </div>
+
+        <div class="spending-card box">
+          <h2 style="color: white; margin-left: 0;">Spending</h2>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
 </body>
 </html>
