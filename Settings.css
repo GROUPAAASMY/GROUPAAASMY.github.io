@@ -1,21 +1,12 @@
-body{
-  margin: 0;
-  background-color: #faf6f7;
-}
-.Settingssections{
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  margin: 170px 0 0 230px;
-}
 .Sidebar{  /* Pink sidebar on the left */
   top: 0;
   left: 0;
   padding: 0;
   border-right:#999 solid 1px;  
   height: 100%;
-  width: 200px;
+  width: 240px;
   position: fixed;
+  z-index: 1;
   background-color: #f7edf3;
 }
 #logo{    /*Positionning the logo */
@@ -51,24 +42,96 @@ body{
   font-size: 8px;
   color: #666;
 }
+h4{
+  position: relative;
+  left:50px;
+  margin-top: 0;
+  top: 0;
+  font-family: sans-serif;
+  font-weight: 10;
+}
+h3{
+  font-weight: 10;
+}
+i{
+  position: relative;
+  top: 17px;
+  left: 5px;
+}
+.icons{
+  position: absolute;
+  top: 130px;
+  left: 25px;
+  width: 200px;
+  height: 1000px;
+  color: #927b8a;
+  font-family: "Inter", sans-serif;
+}
+#Hometab,
+#Taskstab,
+#Groceriestab,
+#Amenitiestab,
+#Eventstab,
+#Settingstab{
+  position: relative;
+  height: 50px;
+  width: 150px;
+  align-items: center;
+  border-radius: 15px;
+}
+#Hometab:hover,
+#Taskstab:hover,
+#Groceriestab:hover,
+#Amenitiestab:hover,
+#Eventstab:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #81245e;
+}
+#Taskstab{
+  top: 10px;
+}
+#Groceriestab{
+  top: 20px;
+}
+#Amenitiestab{
+  top: 30px;
+}
+#Eventstab{
+  top: 40px;
+}
+#Settingstab{
+  background-color: white;
+  color: #81245e;
+  top: 245px;
+}
+a{  /* Removes the underline and blue color given to the icons with the hyperlink being assigned to them */
+  text-decoration: none;
+  color: inherit;
+}
 #Settingstext{
     position: absolute;
     font-size: 45px;
     font-family: 'DM Serif Display', serif;
     top: 30px;
-    left: 230px;
+    left: 280px;
     letter-spacing: 2px;
     color: #391b32;
 }
+.Settingssections{
+    position: relative;
+    top: 150px;
+}
 .Accountsection{
     position: relative;
+    left: 270px;
     height: 170px;
     width: 700px;
     border: solid #999 1px;
     border-radius: 15px;;
     background-color: white;
 }
-.Accountsection.isopen{  /* For each "isopen" adding, the height is increased to match the space addded with the previously hidden content*/
+.Accountsection.isopen{
   height: 400px;
 }
 #Account,
@@ -91,15 +154,22 @@ body{
 }
 #locklogo{
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   left: 20px;
   top: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
-  background-color: #fcebf3
+  font-size: 24px;
+  color: #81245e;
+  background-color: #fcebf3;
 }
 #Changepass{
   position: absolute;
-  top: 100px;
+  top: 90px;
   left: 80px;
   font-family: sans-serif;
   font-size: 15px;
@@ -108,14 +178,14 @@ body{
 #Expandicon1{
   position: absolute;
   left: 660px;
-  top: 110px;
+  top: 120px;
   cursor: pointer
 }
 #Expandicon1.open,
 #Expandicon2.open,
 #Expandicon3.open,
 #Expandicon4.open{
-  transform: rotate(90deg); /*Rotates the clicked chevron (read corresponding js to see how the open class part is added */
+  transform: rotate(90deg);
 }
 #Oldpassword{
   position: absolute;
@@ -189,11 +259,13 @@ body{
 }
 .House{
   position: relative;
-  height: 145px;
+  left: 270px;
+  height: 170px;
   width: 700px;
   top: 30px;
   border: solid #999 1px;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   background-color: white;
 }
 .House.isopen{
@@ -201,15 +273,22 @@ body{
 }
 #homelogo{
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   left: 20px;
-  top: 65px;
+  top: 95px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
+  font-size: 24px;
+  color: #81245e;
   background-color: #fcebf3;
 }
 #Naming{
   position: absolute;
-  top: 65px;
+  top: 85px;
   left: 80px;
   font-family: sans-serif;
   font-size: 15px;
@@ -218,17 +297,16 @@ body{
 #Expandicon2{
   position: absolute;
   left: 660px;
-  top: 80px;
+  top: 100px;
   cursor: pointer
 }
 .Addmember{
   position: relative;
-  height: 145px;
+  left: 270px;
+  height: 110px;
   width: 700px;
-  top: 60px;
+  top: 30px;
   border: solid #999 1px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   background-color: white;
 }
 .Addmember.isopen{
@@ -236,15 +314,22 @@ body{
 }
 #addlogo{
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   left: 20px;
-  top: 65px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
+  font-size: 24px;
+  color: #81245e;
   background-color: #fcebf3;
 }
 #Addtext{
   position: absolute;
-  top: 65px;
+  top: 20px;
   left: 80px;
   font-family: sans-serif;
   font-size: 15px;
@@ -253,14 +338,18 @@ body{
 #Expandicon3{
   position: absolute;
   left: 660px;
-  top: 80px;
+  top: 55px;
   cursor: pointer
+}
+.Addmember #Emailorusername{
+  top: 165px;
 }
 .Managemembers{
   position: relative;
+  left: 270px;
   height: 100px;
   width: 700px;
-  top: 60px;
+  top: 30px;
   border: solid #999 1px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -271,15 +360,22 @@ body{
 }
 #managelogo{
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   left: 20px;
   top: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
+  font-size: 24px;
+  color: #81245e;
   background-color: #fcebf3;
 }
 #Managetext{
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 80px;
   font-family: sans-serif;
   font-size: 15px;
@@ -288,11 +384,12 @@ body{
 #Expandicon4{
   position: absolute;
   left: 660px;
-  top: 45px;
+  top: 50px;
   cursor: pointer
 }
 .Logout{
   position: relative;
+  left: 270px;
   height: 100px;
   width: 700px;
   top: 90px;
@@ -300,12 +397,27 @@ body{
   border-radius: 15px;
   background-color: white;
 }
+#Logouttext{
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #391b32
+}
 #gearlogo{
- position: absolute;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   left: 20px;
   top: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
+  font-size: 24px;
+  color: #81245e;
   background-color: #fcebf3;
 }
 #Expandicon5{
@@ -313,4 +425,67 @@ body{
   left: 660px;
   top: 45px;
   cursor: pointer
+}
+.section-description{
+  color: #999;
+  font-family: "Inter", sans-serif;
+  font-weight: 10;
+  font-size: 12px;
+  left: 80px;
+}
+#Accountp{
+  position: absolute;
+  top: 120px;
+}
+#Namep{
+  position: absolute;
+  top: 115px;
+}
+#Addp{
+  position: absolute;
+  top: 50px;
+}
+#Managep{
+  position: absolute;
+  top: 50px;
+}
+#Logoutp{
+  position: absolute;
+  top: 50px;
+}
+#Bell{
+  position: absolute;
+  top: 25px;
+  left: 1200px;
+  display: flex;
+  color: #81245e;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: 1px solid #927b8a;
+}
+#Bell:hover{
+  cursor: pointer;
+}
+#Profile{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
+  left: 1260px;
+  height: 40px;
+  width: 40px;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+  font-weight: 10;
+  color: white;
+  background-color: #a62940;
+  border-radius: 50px;
+}
+#Profile:hover{
+  cursor: pointer;
 }
