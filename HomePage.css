@@ -25,6 +25,9 @@ a{  /* Removes the blue color and underline from making a text element a hyperli
   flex-direction:column;
   border-right: 1px solid#eadce4
 }
+span{
+  font-family: "Inter", sans-serif;
+}
 .logo{
   display:flex;
   align-items:center;
