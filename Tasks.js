@@ -43,6 +43,50 @@ document.querySelectorAll('.task input').forEach(item => {
 
 filter.addEventListener('change', showTasks);
 
+// SWAP: click Swap on one task, then Swap on a second task to trade owners
+const swapHint = document.getElementById('swapHint');
+let firstTask = null;
+
+function swapOwners(a, b){
+  const badgeA = a.querySelector('.badge');
+  const badgeB = b.querySelector('.badge');
+  // swap the owner initials
+  const ownerA = a.dataset.owner;
+  a.dataset.owner = b.dataset.owner;
+  b.dataset.owner = ownerA;
+  // swap the badge text and colour
+  const textA = badgeA.textContent;
+  const colourA = badgeA.className;
+  badgeA.textContent = badgeB.textContent;
+  badgeA.className = badgeB.className;
+  badgeB.textContent = textA;
+  badgeB.className = colourA;
+}
+
+function clickSwap(task){
+  if(firstTask === null){
+    // first click: remember this task
+    firstTask = task;
+    task.classList.add('swap-selected');
+    swapHint.hidden = false;
+  }else{
+    // second click on a different task: swap, then reset
+    if(firstTask !== task){
+      swapOwners(firstTask, task);
+    }
+    firstTask.classList.remove('swap-selected');
+    firstTask = null;
+    swapHint.hidden = true;
+    showTasks();
+  }
+}
+
+document.querySelectorAll('.swap-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    clickSwap(button.closest('.task'));
+  });
+});
+
 // Adds a new task when the form is submitted
 document.getElementById('addForm').addEventListener('submit', event => {
   event.preventDefault();
@@ -53,8 +97,11 @@ document.getElementById('addForm').addEventListener('submit', event => {
   const task = document.createElement('div');
   task.className = 'task';
   task.dataset.owner = 'YO';
-  task.innerHTML = '<input type="checkbox"><div><h4></h4><small>Anytime today</small></div><span class="badge red">YO</span>';
+  task.innerHTML = '<input type="checkbox"><div><h4></h4><small>Anytime today</small></div><button type="button" class="swap-btn">Swap</button><span class="badge red">YO</span>';
   task.querySelector('h4').textContent = input.value;
+  task.querySelector('.swap-btn').addEventListener('click', () => {
+    clickSwap(task);
+  });
   task.querySelector('input').addEventListener('change', () => {
     task.classList.toggle('completed');
     updateCount();
