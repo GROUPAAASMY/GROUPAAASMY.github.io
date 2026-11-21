@@ -15,7 +15,7 @@ a {
   color: inherit;
 }
 
-
+/* Layout: sidebar on the left, content on the right */
 .container {
   display: flex;
   min-height: 100vh;
@@ -88,7 +88,7 @@ a {
   gap: 14px;
 }
 
-
+/* Content */
 .content {
   flex: 1;
   min-width: 0;
@@ -144,7 +144,7 @@ a {
   margin-bottom: 0;
 }
 
-
+/* Progress cards */
 .stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -184,7 +184,7 @@ a {
   background: #731f55;
 }
 
-
+/* Task list */
 .tasks-card {
   background: white;
   border: 1px solid #eadce4;
@@ -238,6 +238,36 @@ a {
 .task .badge {
   margin-left: auto;
 }
+/* Swap button (sits just before the owner badge) */
+.swap-btn {
+  margin-left: auto;
+  padding: 7px 14px;
+  border: 1px solid #731f55;
+  border-radius: 12px;
+  background: white;
+  color: #731f55;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.swap-btn:hover {
+  background: #f3dfe4;
+}
+.swap-btn + .badge {
+  margin-left: 0;
+}
+.task.swap-selected {
+  background: #f7edf3;
+  border-radius: 12px;
+  margin: 0 -10px;
+  padding: 18px 10px;
+}
+#swapHint {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #81245e;
+}
 .task.completed h4 {
   text-decoration: line-through;
   color: #927b8a;
@@ -268,7 +298,7 @@ a {
   font-size: 13px;
 }
 
-
+/* Add task form */
 #addForm {
   display: flex;
   gap: 12px;
@@ -297,7 +327,7 @@ a {
   background: #81245e;
 }
 
-
+/* Small screens */
 @media (max-width: 700px) {
   .container {
     flex-direction: column;
