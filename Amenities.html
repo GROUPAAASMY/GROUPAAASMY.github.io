@@ -1,92 +1,166 @@
+<
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amenities</title>
+    <title>Amenities</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Amenities.css">
 
-  <link rel="stylesheet" href="Amenities.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <script type="module" src="Amenities.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="Amenities.js" defer></script>
 </head>
+
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="brand">
-      <div class="logo">🏠</div>
-      <div>
-        <div class="brand-name">Room Buddy</div>
-        <div class="brand-tagline">Home, together</div>
-      </div>
-    </div>
+    <!-- Sidebar -->
+    <div class="Sidebar">
 
-    <ul class="menu">
-      <li class="menu-item">🏡 Home</li>
-      <li class="menu-item">✔ Tasks</li>
-      <li class="menu-item">🧺 Groceries</li>
-      <li class="menu-item active">🧴 Amenities</li>
-      <li class="menu-item">📅 Events</li>
-    </ul>
+        <a href="HomePage.html">
+            <img src="logo.png" id="logo">
+        </a>
 
-    <div class="menu-item settings">⚙ Settings</div>
-  </div>
-
-  <!-- Main area -->
-  <main class="main">
-
-    <div class="top-bar">
-      <div class="date" id="date"></div>
-      <div class="top-right">
-        <div class="bell">🔔</div>
-        <div class="user">
-          <div class="avatar">YOU</div>
-          <span>Roommate</span>
+        <div class="Title1">
+            <h1>Room</h1>
         </div>
-      </div>
+
+        <div class="Title2">
+            <h1>Buddy</h1>
+        </div>
+
+        <div class="Subtitle">
+            <h2>Home, together</h2>
+        </div>
+
+        <div class="icons">
+
+            <a href="HomePage.html">
+                <div id="Hometab">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </div>
+            </a>
+
+            <a href="Tasks.html">
+                <div id="Taskstab">
+                    <i class="fa-solid fa-check"></i>
+                    <h4>Tasks</h4>
+                </div>
+            </a>
+
+            <a href="Groceries.html">
+                <div id="Groceriestab">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <h4>Groceries</h4>
+                </div>
+            </a>
+
+            <a href="Amenities.html">
+                <div id="Amenitiestab">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h4>Amenities</h4>
+                </div>
+            </a>
+
+            <a href="Events.html">
+                <div id="Eventstab">
+                    <i class="fa-solid fa-calendar"></i>
+                    <h4>Events</h4>
+                </div>
+            </a>
+
+            <a href="Settings.html">
+                <div id="Settingstab">
+                    <i class="fa-solid fa-gear"></i>
+                    <h4>Settings</h4>
+                </div>
+            </a>
+
+        </div>
     </div>
 
-    <h1 class="page-title">Amenities</h1>
+    <!-- Date and profile -->
+    <h2 id="date"></h2>
+
+    <a href="Notifications.html">
+        <i id="Bell" class="fa-regular fa-bell"></i>
+    </a>
+
+    <div id="Profile">
+        <h2>YOU</h2>
+    </div>
+
+    <!-- Main heading -->
+    <h1 id="Grocerytext">Amenities</h1>
 
     <div class="columns">
 
-      <div class="left-column">
-        <h2>Missing items</h2>
-        <div class="box missing-box">
-          <div class="add-row">
-            <input type="text" id="item-input" placeholder="Enter item">
-            <button id="add-button" type="button">+</button>
-          </div>
-          <ul id="missing-list">
-            <li class="empty-message">Nothing missing!</li>
-          </ul>
+        <!-- Left column -->
+        <div class="left-column">
+
+            <h3 id="Buytext">Missing items</h3>
+
+            <div class="Tobuy">
+
+                <div class="add-row">
+                    <input type="text" id="item-input" placeholder="Enter item">
+                    <button id="add-button" type="button">+</button>
+                </div>
+
+                <ul id="missing-list">
+                    <li class="empty-message">Nothing missing!</li>
+                </ul>
+
+            </div>
+
+            <h3 id="Boughttext">
+                Bought items <span class="green-check">✓</span>
+            </h3>
+
+            <div class="Bought">
+                <ul id="bought-list">
+                    <li class="empty-message">Nothing bought yet.</li>
+                </ul>
+            </div>
+
         </div>
 
-        <h2>Bought items <span class="green-check">✓</span></h2>
-        <div class="box bought-box">
-          <ul id="bought-list">
-            <li class="empty-message">Nothing bought yet.</li>
-          </ul>
-        </div>
-      </div>
+        <!-- Right column -->
+        <div class="right-column">
 
-      <div class="right-column">
-        <h2>Common items</h2>
-        <div class="box common-box">
-          <ul id="common-list"></ul>
-        </div>
+            <h3 id="Commonitems">Common items</h3>
 
-        <div class="spending-card box">
-          <h2 style="color: white; margin-left: 0;">Spending</h2>
+            <div class="Quickadd">
+
+                <ul id="common-list">
+                    <li><button class="plus" type="button">+</button> Face wash</li>
+                    <li><button class="plus" type="button">+</button> Shampoo</li>
+                    <li><button class="plus" type="button">+</button> Conditioner</li>
+                    <li><button class="plus" type="button">+</button> Body wash</li>
+                    <li><button class="plus" type="button">+</button> Toothpaste</li>
+                    <li><button class="plus" type="button">+</button> Toilet paper</li>
+                    <li><button class="plus" type="button">+</button> Hand soap</li>
+                    <li><button class="plus" type="button">+</button> Laundry detergent</li>
+                    <li><button class="plus" type="button">+</button> Dish soap</li>
+                    <li><button class="plus" type="button">+</button> Paper towels</li>
+                </ul>
+
+            </div>
+
+            <!-- Spending -->
+            <div class="spending-card">
+                <h2>Spending</h2>
+            </div>
+
         </div>
-      </div>
 
     </div>
-  </main>
 
 </body>
 </html>
+
