@@ -1,0 +1,446 @@
+body{
+  background-color: #faf6f7;
+  font-family: "Inter", sans-serif;
+}
+
+/* Pink sidebar on the left (same as Groceries.css) */
+.Sidebar{
+  top: 0;
+  left: 0;
+  padding: 0;
+  border-right: #999 solid 1px;  
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  background-color: #f7edf3;
+}
+
+#logo{    /* Positioning the logo */
+  border-radius: 10%;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #c8a1b3;
+  overflow: hidden;
+}
+
+#logoimg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Title1{ /* Title next to the logo */
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 10px;
+  color: #333;
+}
+
+.Title2{ /* Same as above */
+  position: absolute;
+  top: 22px;
+  left: 70px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 10px;
+  color: #333;
+}
+
+.Subtitle{ /* Below the title */
+  position: absolute;
+  top: 53px;
+  left: 70px;
+  font-family: 'Sans-serif', sans-serif;
+  font-size: 8px;
+  color: #666;
+}
+
+h4{
+  position: relative;
+  left: 50px;
+  margin-top: 0;
+  top: 0;
+  font-family: sans-serif;
+  font-weight: 10;
+}
+
+.Sidebar i{
+  position: relative;
+  top: 17px;
+  left: 5px;
+}
+
+.icons{
+  position: absolute;
+  top: 130px;
+  left: 25px;
+  width: 100px;
+  color: #927b8a;
+  font-family: "Inter", sans-serif;
+}
+
+#Hometab,
+#Taskstab,
+#Groceriestab,
+#Amenitiestab,
+#Eventstab,
+#Settingstab{
+  position: relative;
+  height: 50px;
+  width: 150px;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#Hometab:hover,
+#Taskstab:hover,
+#Groceriestab:hover,
+#Amenitiestab:hover,
+#Eventstab:hover,
+#Settingstab:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #81245e;
+}
+
+#Taskstab{
+  top: 10px;
+}
+#Groceriestab{
+  top: 20px;
+}
+#Amenitiestab{
+  top: 30px;
+}
+#Eventstab{
+  top: 40px;
+}
+#Settingstab{
+  top: 245px;
+}
+
+a{  /* Removes underline and default link color */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Top bar items */
+#date{
+  position: absolute;
+  top: 20px;
+  left: 290px;
+  font-size: 14px;
+  color: #666;
+}
+
+#Bell{   /* Active bell icon since we are on the notifications page */
+  position: absolute;
+  top: 25px;
+  left: 1185px;
+  display: flex;
+  color: white;
+  background-color: #6b1d4e;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: 1px solid #6b1d4e;
+}
+
+#Bell:hover{
+  cursor: pointer;
+}
+
+#Profilebox{  /* Shape around profile circle and "You" */
+  position: absolute;
+  top: 23px;
+  left: 1235px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e5dce0;
+  border-radius: 50px;
+  padding: 3px 14px 3px 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#Profilebox:hover{
+  cursor: pointer;
+}
+
+#Profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  font-size: 11px;
+  color: white;
+  background-color: #a62940;
+  border-radius: 50px;
+}
+
+#Youtext{
+  margin-left: 8px;
+  font-size: 13px;
+  color: #391b32;
+}
+
+/* Page headers */
+#Smallheader{
+  position: absolute;
+  top: 75px;
+  left: 290px;
+  font-size: 13px;
+  color: #81245e;
+  font-weight: 500;
+}
+
+#Notificationtext{ /* Big title of the page */
+  position: absolute;
+  top: 75px;
+  left: 290px;
+  font-family: 'DM Serif Display', serif;
+  color: #391b32;
+  font-size: 45px;
+}
+
+#Subheader{
+  position: absolute;
+  top: 155px;
+  left: 290px;
+  font-size: 14px;
+  color: #666;
+}
+
+#Markread{  /* Button on the top right of the list */
+  position: absolute;
+  top: 145px;
+  left: 1190px;
+  background-color: white;
+  border: 1px solid #dfd3d8;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #391b32;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
+
+#Markread:hover{
+  cursor: pointer;
+  background-color: #f7edf3;
+  border-color: #81245e;
+}
+
+/* Notification cards section */
+.Notifcontainer{
+  position: absolute;
+  top: 205px;
+  left: 290px;
+  width: 720px;
+  padding-bottom: 40px;
+}
+
+.Notifcard{
+  position: relative;
+  background-color: white;
+  border: 1px solid #eadfe4;
+  border-radius: 18px;
+  height: 95px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+}
+
+.Notifcard:hover{
+  cursor: pointer;
+  border-color: #c8a1b3;
+}
+
+.hidden{
+  display: none;
+}
+
+.Cardicon{  /* Rounded square icon on the left of each card */
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.pinkicon{
+  background-color: #f6e4ec;
+  color: #81245e;
+}
+
+.greyicon{
+  background-color: #f5f2f4;
+  color: #6e5d67;
+}
+
+.Reddot{   /* Small dot showing the notification is unread */
+  position: absolute;
+  top: 25px;
+  left: 65px;
+  width: 7px;
+  height: 7px;
+  background-color: #a62940;
+  border-radius: 50%;
+}
+
+.Cardcontent{
+  position: absolute;
+  top: 18px;
+  left: 82px;
+}
+
+.Cardtitle{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #391b32;
+}
+
+.Carddesc{
+  margin: 4px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.Cardtime{
+  margin: 0;
+  font-size: 11px;
+  color: #888;
+}
+
+/* Roommate avatars on the right side of cards */
+.Avatar{
+  position: absolute;
+  top: 30px;
+  right: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purpleavatar{
+  background-color: #540b5c;
+}
+
+.maroonavatar{
+  background-color: #7c184c;
+}
+
+.redavatar{
+  background-color: #a62940;
+}
+
+/* Big dark purple button at the bottom */
+#Viewall{
+  width: 100%;
+  height: 45px;
+  margin-top: 6px;
+  background-color: #6b1d4e;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 10px rgba(107, 29, 78, 0.2);
+}
+
+#Viewall:hover{
+  cursor: pointer;
+  background-color: #81245e;
+}
+
+/* Right side unread summary card */
+.Unreadbox{
+  position: absolute;
+  top: 205px;
+  left: 1035px;
+  width: 230px;
+  height: 295px;
+  background-color: white;
+  border: 1px solid #eadfe4;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+}
+
+#Summaryicon{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#Unreadcount{
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: #391b32;
+  margin: 18px 0 6px 0;
+}
+
+#Unreaddesc{
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+#Line{
+  border: 0;
+  border-top: 1px solid #eee4e8;
+  margin: 22px 0 16px 0;
+}
+
+#Includetitle{
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.Tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.Tag{
+  background-color: #faf6f7;
+  border: 1px solid #e5dce0;
+  border-radius: 15px;
+  padding: 5px 12px;
+  font-size: 11px;
+  color: #391b32;
+}
+
+.Tag:hover{
+  cursor: pointer;
+  border-color: #81245e;
+}
+
+.Tag.active{
+  background-color: #f6e4ec;
+  border-color: #81245e;
+  color: #81245e;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Buddy - Notifications</title>
+    <link rel="stylesheet" href="Notifications.css">
+    <!-- Fonts used in Fettucine's groceries page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons for the bell-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+   
+    <div class="Sidebar"> <!-- Pink sidebar on the left -->
+        <div id="logo">
+            <img src="logo.png" alt="Logo" id="logoimg">
+        </div>
+        <div class="Title1"><h1>Room</h1></div>
+        <div class="Title2"><h1>Buddy</h1></div>
+        <div class="Subtitle"><p>home, together</p></div>
+
+        
+        <div class="icons"> <!-- Tabs on the sidebar -->
+            <a href="Home.html">
+                <div id="Hometab">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a href="Tasks.html">
+                <div id="Taskstab">
+                    <i class="fa-solid fa-check"></i>
+                    <h4>Tasks</h4>
+                </div>
+            </a>
+            <a href="Groceries.html">
+                <div id="Groceriestab">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <h4>Groceries</h4>
+                </div>
+            </a>
+            <a href="Amenities.html">
+                <div id="Amenitiestab">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h4>Amenities</h4>
+                </div>
+            </a>
+            <a href="Events.html">
+                <div id="Eventstab">
+                    <i class="fa-regular fa-calendar"></i>
+                    <h4>Events</h4>
+                </div>
+            </a>
+            <a href="Settings.html">
+                <div id="Settingstab">
+                    <i class="fa-solid fa-gear"></i>
+                    <h4>Settings</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+    <p id="date">Thursday, 24 April</p> <!-- Top date -->
+
+    <div id="Bell"> <!-- User bell button -->
+        <i class="fa-regular fa-bell" id="bellicon"></i>
+    </div>
+
+    <div id="Profilebox"> <!-- User prfile button -->
+        <div id="Profile">YO</div>
+        <span id="Youtext">You</span>
+    </div>
+
+    <p id="Smallheader">Household updates</p>  <!-- Main page headings -->
+    <h1 id="Notificationtext">Notifications.</h1>
+    <p id="Subheader">Everything that’s happening at home, in one place.</p>
+
+    <button id="Markread">Mark all as read</button>
+
+
+    <div class="Notifcontainer"> <!-- List of notification cards (Events, task, groceries, reminder for the rent) -->
+        
+        <div class="Notifcard unread" data-category="Events">
+            <div class="Cardicon pinkicon">
+                <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class="Reddot"></div>
+            <div class="Cardcontent">
+                <h3 class="Cardtitle">New event: House dinner</h3>
+                <p class="Carddesc">Sunday, 27 April at 7:00 PM</p>
+                <p class="Cardtime">12 minutes ago</p>
+            </div>
+            <div class="Avatar purpleavatar">SA</div>
+        </div>
+
+        <div class="Notifcard unread" data-category="Tasks">
+            <div class="Cardicon pinkicon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="Reddot"></div>
+            <div class="Cardcontent">
+                <h3 class="Cardtitle">Sam added a task: Take bins out</h3>
+                <p class="Carddesc">Due today before 8:00 PM</p>
+                <p class="Cardtime">2 hours ago</p>
+            </div>
+            <div class="Avatar maroonavatar">MI</div>
+        </div>
+
+        <div class="Notifcard" data-category="Groceries">
+            <div class="Cardicon greyicon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+            <div class="Cardcontent">
+                <h3 class="Cardtitle">Grocery list updated</h3>
+                <p class="Carddesc">Coffee was added to the shared list</p>
+                <p class="Cardtime">5 hours ago</p>
+            </div>
+            <div class="Avatar redavatar">YO</div>
+        </div>
+
+        <div class="Notifcard" data-category="Household">
+            <div class="Cardicon greyicon">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="Cardcontent">
+                <h3 class="Cardtitle">Rent reminder</h3>
+                <p class="Carddesc">Rent is due in 5 days</p>
+                <p class="Cardtime">Yesterday</p>
+            </div>
+            <div class="Avatar purpleavatar">SA</div>
+        </div>
+
+        <!-- Extra hidden notification that appears when clicking view all -->
+        <div class="Notifcard hidden" data-category="Groceries">
+            <div class="Cardicon greyicon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+            <div class="Cardcontent">
+                <h3 class="Cardtitle">Milk marked as bought</h3>
+                <p class="Carddesc">Sam checked off Milk from the list</p>
+                <p class="Cardtime">2 days ago</p>
+            </div>
+            <div class="Avatar purpleavatar">SA</div>
+        </div>
+
+        <button id="Viewall">+ View all notifications</button>
+    </div>
+
+    <!-- Right side summary box -->
+    <div class="Unreadbox">
+        <div class="Cardicon pinkicon" id="Summaryicon">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <h2 id="Unreadcount">2 unread</h2>
+        <p id="Unreaddesc">You have 2 unread household updates.</p>
+        <hr id="Line">
+        <p id="Includetitle">UPDATES INCLUDE</p>
+        <div class="Tags">
+            <span class="Tag">Tasks</span>
+            <span class="Tag">Groceries</span>
+            <span class="Tag">Events</span>
+            <span class="Tag">Household</span>
+        </div>
+    </div>
+
+    <script src="Notifications.js"></script>
+</body>
+</html>
