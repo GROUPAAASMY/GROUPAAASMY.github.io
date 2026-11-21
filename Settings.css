@@ -117,7 +117,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
     font-size: 45px;
     font-family: 'DM Serif Display', serif;
     top: 30px;
-    left: 280px;
+    left: 290px;
     letter-spacing: 2px;
     color: #391b32;
 }
@@ -127,7 +127,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 }
 .Accountsection{
     position: relative;
-    left: 270px;
+    left: 290px;
     height: 170px;
     width: 700px;
     border: solid #999 1px;
@@ -262,7 +262,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 }
 .House{
   position: relative;
-  left: 270px;
+  left: 290px;
   height: 170px;
   width: 700px;
   top: 30px;
@@ -305,7 +305,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 }
 .Addmember{
   position: relative;
-  left: 270px;
+  left: 290px;
   height: 110px;
   width: 700px;
   top: 30px;
@@ -349,7 +349,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 }
 .Managemembers{
   position: relative;
-  left: 270px;
+  left: 290px;
   height: 100px;
   width: 700px;
   top: 30px;
@@ -392,7 +392,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 }
 .Logout{
   position: relative;
-  left: 270px;
+  left: 290px;
   height: 100px;
   width: 700px;
   top: 90px;
