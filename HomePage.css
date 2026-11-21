@@ -147,6 +147,7 @@ span{
 .hero h1{
   font-size:46px;
   max-width:650px;
+  font-family: 'DM Serif Display', serif;
 }
 .stats{
   display:grid;
