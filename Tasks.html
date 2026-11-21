@@ -62,7 +62,7 @@
         </div>
       </aside>
 
-      
+      <!--Main-->
       <main class="content">
         <header class="topbar">
           <span></span>
@@ -81,7 +81,7 @@
           <p class="subtitle">A little effort goes a long way.</p>
         </section>
 
-      
+        <!--Progress-->
         <section class="stats">
           <div class="card light-pink">
             <h3>Tasks completed</h3>
@@ -116,6 +116,7 @@
                 <h4>Take bins out</h4>
                 <small>Before 8:00 PM</small>
               </div>
+              <button type="button" class="swap-btn">Swap</button>
               <span class="badge purple">SA</span>
             </div>
 
@@ -125,6 +126,7 @@
                 <h4>Water the plants</h4>
                 <small>Living room</small>
               </div>
+              <button type="button" class="swap-btn">Swap</button>
               <span class="badge red">YO</span>
             </div>
 
@@ -134,6 +136,7 @@
                 <h4>Wipe kitchen counters</h4>
                 <small>Anytime today</small>
               </div>
+              <button type="button" class="swap-btn">Swap</button>
               <span class="badge pink">MI</span>
             </div>
 
@@ -143,6 +146,7 @@
                 <h4>Vacuum hallway</h4>
                 <small>Tomorrow, 10:00 AM</small>
               </div>
+              <button type="button" class="swap-btn">Swap</button>
               <span class="badge purple">EM</span>
             </div>
 
@@ -152,10 +156,12 @@
                 <h4>Laundry</h4>
                 <small>Anytime this week</small>
               </div>
+              <button type="button" class="swap-btn">Swap</button>
               <span class="badge red">YO</span>
             </div>
           </div>
 
+          <p id="swapHint" hidden>Now pick the task you want to swap with.</p>
           <p id="emptyMessage" hidden>No tasks here.</p>
 
           <!--Add task-->
