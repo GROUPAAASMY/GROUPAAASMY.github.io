@@ -71,6 +71,7 @@ span{
   border-radius:13px;
   color:#927b8a;
   font-size:14px;
+  font-family: 'Inter', sans serif;
   cursor:pointer;
 }
 .sidebar nav li i{
@@ -155,7 +156,7 @@ span{
   font-size:72px;
   line-height:0.95;
   max-width:900px;
-  font-family:'Playfair Display', serif;
+  font-family:'DM Serif Display', serif;
   color:#391b32;
 }
 .stats{
