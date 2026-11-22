@@ -50,32 +50,31 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
     boughtDoc.addEventListener("change", moveItem);
 
 
-    const textbox = buyDoc.getElementById("Additem");
+    const textbox = buyDoc.getElementById("Additem"); //Assigning a constant to the textbox in the buying frame
 
-    textbox.addEventListener("keydown", (event) => {
-        if (event.key !== "Enter") return;
-        event.preventDefault();
+    textbox.addEventListener("keydown", (event) => { //
+        if (event.key !== "Enter") return; //Cancels the procedure if the pressed key isn't enter
 
-        const itemName = textbox.value.trim();
-        if (!itemName) return;
+        const itemName = textbox.value.trim(); //Extracts the input text in the textbox (Think of it like python's .read().strip())
+        if (!itemName) return; //Cancels the procedure when there's no text and enter is still pressed
 
         const buyColumn1 = buyDoc.getElementById("Column1");
-        const buyColumn2 = buyDoc.getElementById("Column2");
+        const buyColumn2 = buyDoc.getElementById("Column2"); 
         const destination = buyColumn1.children.length <= buyColumn2.children.length
             ? buyColumn1
-            : buyColumn2;
+            : buyColumn2; //Another shortened if statement to chose the destination
 
-        const item = buyDoc.createElement("li");
-        const checkbox = buyDoc.createElement("input");
-        const linebreak = buyDoc.createElement("br");
+        const item = buyDoc.createElement("li"); //Creates a new 'li' element
+        const checkbox = buyDoc.createElement("input"); //Creates its corresponding input
+        const linebreak = buyDoc.createElement("br"); 
         item.id = "item";
-        checkbox.type = "checkbox";
-        checkbox.className = "Check";
+        checkbox.type = "checkbox"; //Makes the input a checkbox (And gives it the checkbox class on the line below)
+        checkbox.className = "Check"; //Assigns the item id to the new element for the style to be the same as the others
 
         item.appendChild(checkbox);
         item.appendChild(buyDoc.createTextNode(` ${itemName}`));
         destination.appendChild(item);
-        destination.appendChild(linebreak)
+        destination.appendChild(linebreak) 
         textbox.value = "";
     });
 
@@ -89,11 +88,11 @@ window.addEventListener("load", () => { //Waits until the entire page is loaded
             ? column1
             : column2;
 
-        const item = buyDoc.createElement("li"); //Creates a new 'li' element
-        const checkbox = buyDoc.createElement("input"); //Creates its corresponding input
-        checkbox.type = "checkbox"; //Makes the input a checkbox (And gives it the checkbox class on the line below)
+        const item = buyDoc.createElement("li"); 
+        const checkbox = buyDoc.createElement("input"); 
+        checkbox.type = "checkbox"; 
         checkbox.className = "Check";
-        item.id = 'item' //Assigns the item id to the new element
+        item.id = 'item' //item element creation works the same as the textbox part of this page's code (look at code above)
 
         item.appendChild(checkbox); //Appending system is the same as when moving an element to the bought list
         item.appendChild(buyDoc.createTextNode(` ${itemName}`));
