@@ -38,6 +38,7 @@ body{
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom:60px
     
 }
 .logo-txt{
@@ -60,6 +61,7 @@ body{
     flex-direction:column;
     gap:8px;
     flex:1;
+    margin-top: 20px
     /*flex-grow: 1;*/
 }
 .notif-btn{
