@@ -61,7 +61,14 @@ body{
     gap: 8px;
     /*flex-grow: 1;*/
 }
-
+.notif-btn{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid #e4dce2;
+    background:white;
+    cursor:pointer;
+}
 .menu-bar-text{
     display: flex;
     align-items: center;
@@ -73,6 +80,10 @@ body{
     font-weight: 500;
     font-size: 0.95rem;
     transition: background 0.2s;
+}
+
+.active i{
+    color:#7a1d64;
 }
 .menu-bar-texts{
     display: flex;
