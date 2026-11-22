@@ -83,8 +83,9 @@ span{
   box-shadow:0 5px 15px rgba(80,30,60,0.05);
 }
 .settings{
-  padding: 15px 18px;
-  display: flex;
+  margin-top:auto;
+  padding:15px 18px;
+  display:flex;
   align-items:center;
   gap:14px;
   color:#927b8a;
@@ -153,7 +154,7 @@ span{
 .hero h1{
   font-size:72px;
   line-height:0.95;
-  max-width:600px;
+  max-width:900px;
   font-family:'Playfair Display', serif;
   color:#391b32;
 }
