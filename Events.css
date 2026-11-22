@@ -25,13 +25,14 @@ body{
 .sidebar{
     position: fixed;
     top:0;
-    left :0;
-    border-right:#f8f6f6 solid 1px;
-    
+    left:0;
+
     background-color:var(--card-pink);
-    padding: 0;
-    height: 100%;
     width:200px;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
 }
 .logo-img{
     display: flex;
@@ -45,7 +46,6 @@ body{
     top :0;
     left: 50px;
 }
-
 .sub-title h2{
     font-size: 35px;
     font-family: 'Merriweather';
@@ -56,9 +56,10 @@ body{
 }*/
 
 .menu-bar{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    flex:1;
     /*flex-grow: 1;*/
 }
 .notif-btn{
@@ -86,19 +87,29 @@ body{
     color:#7a1d64;
 }
 .menu-bar-texts{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    padding: 300px 16px ;
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    text-decoration:none;
+    color:#8f7e8c;
+    font-weight:500;
+
+    margin-top:auto;
+    margin-bottom:25px;
+    padding:12px 16px;
 }
 .menu-bar-text.active{
     background: var(--white);
-    color: var(--plum-primary);
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(122, 39, 72, 0.05);
+    color: var(--main-color);
+    font-weight:600;
+    box-shadow:0 2px 8px rgba(122,39,72,.05);
+}
+.menu-bar-text i,
+.menu-bar-texts i{
+    color:#9b8b98;
+    font-size:16px;
+    width:20px;
 }
 
 .main-container{
