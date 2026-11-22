@@ -152,9 +152,10 @@ span{
   margin-bottom:12px;
 }
 .hero h1{
-  font-size:46px;
+  font-size:45px;
   max-width:650px;
   font-family: 'DM Serif Display', serif;
+  color: #391b32;
 }
 .stats{
   display:grid;
