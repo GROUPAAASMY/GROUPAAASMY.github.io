@@ -1,272 +1,343 @@
-/*Basic setup */
-* {
-  box-sizing: border-box;   /*checked this part online to make sure boxes dont get bigger */
-  margin: 0;
+body{
+  background-color: #faf6f7;
+}
+.Sidebar{  /* Pink sidebar on the left */
+  top: 0;
+  left: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Inter", Arial, sans-serif;
-  background-color: #fcf9fb;   /* very light pink-white shade */
-  color: #1d1a22;              /* black text color */
-  display: flex;               /* puts sidebar and main side by side. */
-  min-height: 100vh;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Sidebar code  */
-.sidebar {
+  border-right:#999 solid 1px;  
+  height: 100%;
   width: 240px;
-  padding: 28px 12px;
-  background-color: #f5e6ee;   /* pretty soft pink */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  position: fixed;
+  background-color: #f7edf3;
 }
+#logo{    /*Positionning the logo */
+  border-radius: 10%;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #c8a1b3;
+}
+.Title1{ /* Title next to the logo */
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  font-family: 'DM Serif Display', serif; /* Font used */
+  font-size: 10px;
+  color: #333;
+}
+.Title2{ /* Same as above */
+  position: absolute;
+  top: 22px;
+  left: 70px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 10px;
+  color: #333;
+}
+.Subtitle{ /* Below the title */
+  position: absolute;
+  top: 53px;
+  left: 70px;
+  font-family: 'Sans-serif', sans-serif;
+  font-size: 8px;
+  color: #666;
+}
+h4{
+  position: relative;
+  left:50px;
+  margin-top: 0;
+  top: 0;
+  font-family: sans-serif;
+  font-weight: 10;
 
-.brand {
-  display: flex;
+}
+i{
+  position: relative;
+  top: 17px;
+  left: 5px;
+}
+.icons{
+  position: absolute;
+  top: 130px;
+  left: 25px;
+  width: 100px;
+  color: #927b8a;
+   font-family: "Inter", sans-serif;
+}
+#Hometab,
+#Taskstab,
+#Groceriestab,
+#Amenitiestab,
+#Eventstab,
+#Settingstab{
+  position: relative;
+  height: 50px;
+  width: 150px;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 50px;
+  border-radius: 15px;
 }
-
-.logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background-color: #b8648b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-}
-
-.brand-name {
-  font-family: Georgia, serif;
-  font-weight: bold;
-  font-size: 18px;
-  color: #3a2a3f;
-}
-
-.brand-tagline {
-  font-size: 12px;
-  color: #7a7283;
-}
-
-.menu {
-  flex: 1;   /* pushes Settings to the bottom */
-}
-
-.menu-item {
-  padding: 14px 18px;
-  margin-bottom: 6px;
-  border-radius: 14px;
-  color: #7a7283;
-  font-size: 15px;
+#Hometab:hover,
+#Taskstab:hover,
+#Amenitiestab:hover,
+#Eventstab:hover,
+#Settingstab:hover,
+#Taskstab:hover{
   cursor: pointer;
-}
-
-.menu-item:hover {
-  background-color: #fbeff5; /*hit or miss with this one i tried*/
-}
-
-.menu-item.active {
   background-color: white;
-  color: #c2415f;   /*hit or miss with this one as well i tried*/
+  color: #81245e;
 }
-
-/* Main area */
-.main {
-  flex: 1;
-  padding: 28px 40px 50px 40px;
+#Taskstab{
+  top: 10px;
 }
-
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.date {
-  font-size: 14px;
-  color: #7a7283;
-}
-
-.top-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.bell,
-.user {
+#Groceriestab{
   background-color: white;
-  border-radius: 25px;
-  height: 44px;
-  display: flex;
-  align-items: center;
+  color: #81245e;
+  top: 20px;
 }
-
-.bell {
-  width: 44px;
-  justify-content: center;
+#Amenitiestab{
+  top: 30px;
 }
-
-.user {
-  padding: 0 18px 0 6px;
-  gap: 10px;
-  font-weight: 600;
+#Eventstab{
+  top: 40px;
 }
-
-.avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-color: #b8435f;
-  color: white;
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#Settingstab{
+  top: 245px;
 }
-
-.page-title {
-  font-family: "DM Serif Display", Georgia, serif;
-  font-weight: normal;
-  font-size: 64px;
-  color: #5a1a6b;   /* deep purple shade!!! */
-  margin: 50px 0 60px 28px;
+a{  /* Removes the underline and blue color given to the icons with the hyperlink being assigned to them */
+  text-decoration: none;
+  color: inherit;
 }
-
-/* Two Columns and what not  */
-.columns {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
+#date{
+  position: absolute;
+  left: 290px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 10;
 }
-
-.left-column {
-  flex: 1;
+#Grocerytext{ /* Big phrase of the page */
+  position: fixed;
+  top: 30px;
+  left: 290px;
+  font-family: 'DM Serif Display', serif;
+  color: #391b32;
+  font-size: 45px;
 }
-
-.right-column {
-  width: 320px;
+.Tobuy{         /* Styling the list to buy */
+  position: fixed;
+  top: 100px;
+  left: 290px;
+  width: 500px;
+  height: 400px;
+  border: 0px;
 }
-
-h2 {
-  font-size: 18px;
-  color: #4b1560;
-  margin: 0 0 8px 12px;
+h3{
+  font-family: sans-serif;
+  color: #601A73;
+  left: 300px;
 }
-
-.green-check {
-  background-color: #4caf3e;
-  color: white;
-  border-radius: 50%;
-  padding: 1px 6px;
-  font-size: 14px;
+#Buytext{
+  position: absolute;
+  top: 127px;
 }
-
-/* Rounded boxes  */
-.box {
-  border-radius: 30px;
-  padding: 24px 36px;
+#Boughttext{
+  position: absolute;
+  top: 357px;
 }
-
-.missing-box {
-  background-color: #f8e8ef;
-  min-height: 250px;
-  margin-bottom: 50px;
+#buyframe{     /* Styling the frame of the above list */   
+  position: fixed;
+  top: 170px;
+  left: 290px;
+  width: 580px;
+  height: 190px;
+  border: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.Buylist{     /* In the buylist frame, style of the list */
+  white-space: nowrap;
+  top: 10px;
+  left: 30px;
+  font-size: 10px;
+  font-family: 'Sans-serif', sans-serif;
+}
+#Column1{     /* To seperate the list into two columns */
+  position: absolute;
+  top:50px;
+  left: 30px;
+}
+#Column2{     /* Part of the above style */
+  position: absolute; 
+  top:50px;
+  left: 280px;
+}
+.Check{   /* Style of the checkbox before checking */
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 15px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.Check:checked {     /* Fill color for a checked checkbox (rotation is for the checkmark)*/
+  background-color: #601A73;
+  border-color: #601A73;
+  transform: rotate(35deg);
+}
+.Check::after {      /*Style of the checkbox after being checked (mainly making of the checkmark) */
+  content: "_";
+  color: transparent;
+  width: 12px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  left: 6px;
+  top: 2px;
   position: relative;
 }
-
-.bought-box {
-  background-color: #f4e9f4;
-}
-
-.common-box {
-  background-color: #f3e6f1;
-  padding: 20px 28px;
-}
-
-/* ===Code for the missing and bought items */
-.box li {
-  font-size: 18px;
-}
-
-.item-button {
-  background: none;
-  border: none;
-  font-size: 18px;
-  font-family: inherit;
-  padding: 8px 4px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.item-button:hover {
-  background-color: white;
-  border-radius: 8px;
-}
-
-#missing-list li,
-#bought-list li {
-  list-style: disc;     /*#Black bullet dots stuff*/
-  margin-left: 22px;
-}
-
-.empty-message {
-  color: #7a7283;
-  list-style: none !important;
-}
-
-/* ===== "ENTER ITEM" INPUT ===== */
-.add-row {
-  position: absolute;
-  top: 16px;
-  right: 80px;
-  width: 300px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 4px 8px;
-  display: flex;
-  align-items: center;
-}
-
-.add-row input {
-  flex: 1;
-  border: none;
+.Check:hover {   /* Style of the checkbox when hovered */
   outline: none;
-  font-size: 17px;
+  box-shadow: 0 0 5px #601A73;
+}
+.Check:focus {   /* Style of the checkbox when clicked */
+  outline: none;
+  border: 1px solid #601A73;
+  box-shadow: 0 0 5px #601A73;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  font-family: sans-serif;
+}
+li{
+  margin-bottom: 18px;
+}
+#item{
+  color: #391b32;
+  font-size: 25px;
+}
+#Additem{   /* Style of the input box to add an item */
+  position: absolute;
+  text-align: center;
   font-style: italic;
-  padding: 6px;
-}
-
-/* Cute Plus buttons */
-#add-button,
-.plus-button {
-  background: none;
-  border: none;
-  color: #5b2a86;   /* purple */
-  font-size: 26px;
-  cursor: pointer;
-  width: 30px;
-}
-
-/* Common items list! */
-#common-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 18px;
-  padding: 3px 0;
+  top: 10px;
+  left: 410px;
+  width: 130px;
+  height: 25px;
+  border: 0;
+  border-radius: 10px;
+  background-color: white;
 }
-
-/* Purple card */
-.spending-card {
-  margin-top: 26px;
-  background-color: #5a1a6b
+#Additem:hover{   /* Style of the input box when hovered */
+  outline: none;
+  box-shadow: 0 0 5px #601A73;
+  cursor: pointer;
+}
+#Additem:focus{   /* Style of the input box when clicked */
+  outline: none;
+  border: 1px solid #601A73;
+  box-shadow: 0 0 5px #601A73;
+}
+.Bought{         /* Styling the list of bought items */
+  position: fixed;
+  top: 400px;
+  left: 230px;
+  width: 500px;
+  height: 400px;
+  border: 0px;
+}
+#boughtframe{     /* Styling the frame of the above list */   
+  position: fixed;
+  left: 290px;
+  top: 400px;
+  width: 580px;
+  height: 190px;
+  border: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#BoughtColumn1{
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+#BoughtColumn2{
+  position: absolute;
+  left: 280px;
+  top: 15px;
+}
+.Quickadd{
+  position: absolute;
+  background-color: #efe8f1;
+  width: 250px;
+  height: 420px;
+  left: 920px;
+  top: 170px;
+  border-radius: 10px;
+}
+#Common{
+  position: absolute;
+  left: 20px;
+}
+.plus{
+  position: absolute;
+  left: 190px;
+  text-align: center;
+  align-content: center;
+  height: 32px;
+  width: 30px;
+  color: white;
+  background-color:#601A73;
+  border-radius: 15px;
+}
+p{
+  margin-top: 0;
+}
+.plus:hover{
+  cursor: pointer;
+}
+#Commonitems{
+  position: absolute;
+  left: 910px;
+  top: 127px;
+}
+#Bell{
+  position: absolute;
+  top: 25px;
+  left: 1230px;
+  display: flex;
+  color: #81245e;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: 1px solid #927b8a;
+}
+#Bell:hover{
+  cursor: pointer;
+}
+#Profile{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
+  left: 1290px;
+  height: 40px;
+  width: 40px;
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 10;
+  color: white;
+  background-color: #a62940;
+  border-radius: 50px;
+}
+#Profile:hover{
+  cursor: pointer;
+}
