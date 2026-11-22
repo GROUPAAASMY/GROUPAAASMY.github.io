@@ -459,7 +459,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
 #Bell{
   position: absolute;
   top: 25px;
-  left: 1200px;
+  left: 1230px;
   display: flex;
   color: #81245e;
   background-color: white;
@@ -479,7 +479,7 @@ a{  /* Removes the underline and blue color given to the icons with the hyperlin
   align-items: center;
   justify-content: center;
   top: 25px;
-  left: 1260px;
+  left: 1290px;
   height: 40px;
   width: 40px;
   font-size: 11px;
